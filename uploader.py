@@ -1,0 +1,1 @@
+#Archivo encargado de hacer la carga (instanciación) de los datos a las tablas de supabase

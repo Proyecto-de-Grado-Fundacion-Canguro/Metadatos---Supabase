@@ -1,0 +1,1 @@
+#Transforma los datos en un csv - cada csv es una dimensión
