@@ -27,7 +27,7 @@ def cargar_data (df, nombre_tabla, cols_conflicto):
             .upsert(records, on_conflict=",".join(cols_conflicto))
             .execute()
         )
-        # si llegamos aquí, fue OK
+
         print(f"{len(records)} filas cargadas en `{nombre_tabla}`")
 
     except APIError as e:

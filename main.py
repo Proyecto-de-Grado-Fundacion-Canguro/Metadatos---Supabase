@@ -31,5 +31,16 @@ def main():
     df_fecha=poblar_fecha()
     exportar_csv(df_fecha,"fecha")
 
+    df_valorCategoria=poblar_valorCategoria()
+    exportar_csv(df_valorCategoria,'valor categoria')
+
+    puenteVls, grupoVls= poblar_puente_y_grupo_variable_longitudinal(df_var)
+    exportar_csv(puenteVls,'puent variable longitudinal')
+    exportar_csv(grupoVls, 'grupo variable longitudinal')
+
+    tabla_hechos=poblar_tabla_hechos(df_var,df_fase_load,df_evento_load,df_episodios_load,df_ti,
+                                     puenteVls,df_valorCategoria)
+    exportar_csv(tabla_hechos,'tabla hechos')
+
 if __name__ == "__main__":
     main()
