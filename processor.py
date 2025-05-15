@@ -29,7 +29,7 @@ def inicializar_dimensiones ():
     global hechoRegistrarVariable
 
     
-    evento = pd.DataFrame(columns=['id','nombre','fecha','descripcion','fechaInicio','fechaFin','activo'])
+    
    
     fecha= pd.DataFrame(columns=['id','fechaDate','dia','mes','anio'])
     
@@ -85,7 +85,6 @@ def poblar_fase():
     ultimo= False
     inicio_anio = pd.Timestamp(year=2025, month=1, day=1)
     fin_anio    = pd.Timestamp(year=9999, month=12, day=31)
-    print(df_fases)
     for i,row in df_fases.iterrows():
         if (i==len(df_fases)-1):
             ultimo= True
@@ -119,7 +118,6 @@ def poblar_episodio():
             'nombreBD':row['NOMBRE CORTO']
         })
     episodio = pd.DataFrame(filas,columns=['id','descripcion','fechaInicio','fechaFin','activo','nombreAnalisis','nombreBD'])
-    print(episodio)
     return episodio
 
 #### Dimensión Variable ---------------------------------------------------------------------------------
@@ -150,7 +148,6 @@ def poblar_variable(df_prefijo):
         })
     variable= pd.DataFrame(filas,columns=['id','nombreBD','nombreAnalisis','descripcionCorta','descripcionLarga','unidades','tipoDato',
                                     'tipoVariable','nivelMedicion','basica','longitudinal','derivada','variableObjetivo','edadCorregida','impacto','idPrefijo'])
-    print(variable)
     return variable
 
 
@@ -163,5 +160,90 @@ def encontrar_prefijo_por_sigla(sigla: str, prefijo_df: pd.DataFrame) -> str | N
     return matches.iloc[0]["id"]
 
 #### Dimensión Evento ---------------------------------------------------------------------------------
-def poblar_evento():
+def poblar_evento(variable_df):
     filas=[]
+    inicio_anio = pd.Timestamp(year=2025, month=1, day=1)
+    fin_anio    = pd.Timestamp(year=9999, month=12, day=31)
+    evs=obtener_lista_episodios()
+    print('1111111111111111111')
+    print(evs)
+    for ev in evs:
+        info=obtener_info_variable(variable_df,ev)
+        if info is None:
+            id_var, desc_corta = None, ""
+        else:
+            id_var, desc_corta = info
+
+        filas.append({
+            "id":               str(uuid.uuid4()),
+            "nombre":           ev,
+            "idVariableFecha":       id_var,
+            "descripcion": desc_corta,
+            "fechaInicio":      inicio_anio,
+            "fechaFin":         fin_anio,
+            "activo":           True
+
+        })
+    
+    evento = pd.DataFrame(filas,columns=['id','nombre','idVariableFecha','descripcion','fechaInicio','fechaFin','activo']) 
+    print(evento)
+    return evento
+
+def obtener_lista_episodios():
+    eventos_fases=(
+        pd.concat([
+            df_fases['Evento inicial (id-var)'],
+            df_fases['Evento-final (id-var)']
+        ])
+    .dropna()              
+    .drop_duplicates()     
+    .tolist()
+    )
+
+    eventos_episodios=(
+        pd.concat([
+            df_episodios['Evento inicial (id-var)'],
+            df_episodios['Evento-final (id-var)']
+        ])
+    .dropna()             
+    .drop_duplicates()     
+    .tolist()
+    )
+
+    eventos_union = (
+    pd.Series(eventos_fases + eventos_episodios)
+      .drop_duplicates()
+      .tolist()
+    )
+    return eventos_union
+
+
+def obtener_info_variable (variable_df,nombreAnalisis):
+    var=variable_df[variable_df['nombreAnalisis']==nombreAnalisis]
+    if var.empty:
+        return None
+    fila = var.iloc[0]
+    id_val      = fila['id']
+    desc_corta  = fila['descripcionCorta']
+    
+    return [id_val, desc_corta]
+
+#### Dimensión Fecha ---------------------------------------------------------------------------------
+
+def poblar_fecha (inicio: str = "2025-01-01"):
+    date = pd.to_datetime(inicio).date()
+    dia  = fecha.day
+    mes  = fecha.month
+    anio = fecha.year
+
+    id_str = f"{dia:02d}{mes:02d}{anio}"
+
+    fecha = pd.DataFrame([{
+        "id":         id_str,
+        "fechaDate":  date,
+        "dia":        dia,
+        "mes":        mes,
+        "anio":       anio
+    }])
+
+    return fecha

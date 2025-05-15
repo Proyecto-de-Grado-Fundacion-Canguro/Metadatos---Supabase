@@ -10,7 +10,8 @@ def main():
     print("→ Probando poblar_fase()")
     # Asegúrate de que df_prefijos ya esté cargado
     df_prefijo=poblar_prefijo()
-    poblar_variable(df_prefijo)
+    df_var=poblar_variable(df_prefijo)
+    poblar_evento(df_var)
 
 
 if __name__ == "__main__":
