@@ -1,28 +1,28 @@
 idGrupoVariable,idVariableLongitudinal,descripcion
-4dcd2585-bad1-4301-ab7b-43c9168269c4,c5349965-7014-42e9-8d89-cfe09b4567af,VL_Weight-ERN
-4dcd2585-bad1-4301-ab7b-43c9168269c4,a45e39f6-9b6a-45ac-90bc-3b48cfacadb2,VL_Weight-ENTRADA PosCang
-4dcd2585-bad1-4301-ab7b-43c9168269c4,f1d8daf4-2612-42c2-94a7-91b065f5d7f3,VL_Weight-40S
-4dcd2585-bad1-4301-ab7b-43c9168269c4,73fde99c-8717-4f49-ae39-15065af59480,VL_Weight-3M
-4dcd2585-bad1-4301-ab7b-43c9168269c4,bb2b9511-ae5a-415c-a318-77df9862d746,VL_Weight-6M
-4dcd2585-bad1-4301-ab7b-43c9168269c4,3fdaa84c-5819-414a-be0c-651b1f07abac,VL_Weight-9M
-4dcd2585-bad1-4301-ab7b-43c9168269c4,6743d6a0-71e2-4285-b62b-287170609a46,VL_Weight-12M
-620beb87-fac4-4bcb-b644-88b718a1deac,7d227ae9-6513-44b3-844b-5a70ce7024ed,VL_Height-ERN
-620beb87-fac4-4bcb-b644-88b718a1deac,1d4c24dc-855a-4ae8-98ec-0b3a74c52489,VL_Height-ENTRADA PosCang
-620beb87-fac4-4bcb-b644-88b718a1deac,384487f1-d498-4c61-bfe4-27d4d3481b06,VL_Height-40S
-620beb87-fac4-4bcb-b644-88b718a1deac,db1a74c1-910a-4efc-b185-8fa240c1ac32,VL_Height-3M
-620beb87-fac4-4bcb-b644-88b718a1deac,27233bdb-514e-4735-8810-05b700eba38e,VL_Height-6M
-620beb87-fac4-4bcb-b644-88b718a1deac,5b7c77a0-3979-433d-9f39-c597713256d9,VL_Height-9M
-620beb87-fac4-4bcb-b644-88b718a1deac,a9deca9b-e835-4e54-a1c0-1ee63a0b9088,VL_Height-12M
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,3cd6fe70-00fd-4ce8-80f9-b1246df0b719,VL_HeadCircunference-ERN
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,c55c0245-3892-43e2-a90e-468e998157e9,VL_HeadCircunference-ENTRADA PosCang
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,3da9b45a-91b4-4836-8952-01460e18beb6,VL_HeadCircunference-40S
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,017e5d11-dc8b-4413-bf8a-04e2e3c2c134,VL_HeadCircunference-3M
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,eb9c8795-ccbe-44c0-a691-b12821a6a21d,VL_HeadCircunference-6M
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,4d32d41f-82b3-4e69-9022-f9680591739c,VL_HeadCircunference-9M
-3bf6ac9a-5316-42f7-bd6b-adfcbd5a8df5,c3aed586-9e59-4326-8842-0f281ba7d09d,VL_HeadCircunference-12M
-af88decc-9d81-4fda-b502-9977ae979b3c,57403898-c118-4f0e-895b-a2b15c0fb132,VL_Nutrition-ENTRADA PosCang
-af88decc-9d81-4fda-b502-9977ae979b3c,a943bac1-cdea-4e81-af8b-011477f85e07,VL_Nutrition-40S
-af88decc-9d81-4fda-b502-9977ae979b3c,312e6ec5-f83b-4bf4-9587-21d1c740422c,VL_Nutrition-3M
-af88decc-9d81-4fda-b502-9977ae979b3c,c77cc6a2-9e92-4269-9287-8d80e29e2d35,VL_Nutrition-6M
-af88decc-9d81-4fda-b502-9977ae979b3c,96726920-71e2-42cd-841d-c81346c3ccdf,VL_Nutrition-9M
-af88decc-9d81-4fda-b502-9977ae979b3c,793849aa-7a00-40ab-a1f7-843398a40f00,VL_Nutrition-12M
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,cc9abdc4-005a-44c5-920a-4cea6e013f92,VL_Weight-ERN
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,702b8976-0a05-4ae8-a290-f4d822679a1d,VL_Weight-ENTRADA PosCang
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,176c35ca-d4ce-4652-a612-b0521f6828f0,VL_Weight-40S
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,02cb8ced-e561-47a5-9b05-6ec22f2f010b,VL_Weight-3M
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,81600587-f19a-44fb-b67c-39e358e18316,VL_Weight-6M
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,825859d4-f8ab-4a96-990d-4286a537710e,VL_Weight-9M
+53ceb0b0-e000-4c0e-bc5a-7f93c272d606,8eaabcda-6e26-4768-b37e-f23bdbcc73cd,VL_Weight-12M
+c8296865-8683-4b8c-b1b0-c635983b3136,a24cb616-9620-454b-935a-e49dcb6d6233,VL_Height-ERN
+c8296865-8683-4b8c-b1b0-c635983b3136,e7b847ae-c2db-4992-8ec5-a6e48fd7e3ec,VL_Height-ENTRADA PosCang
+c8296865-8683-4b8c-b1b0-c635983b3136,28fae607-7830-4d7d-956e-b14241ec7b2a,VL_Height-40S
+c8296865-8683-4b8c-b1b0-c635983b3136,ac797c4d-9037-4fa4-bc88-95e0d0732062,VL_Height-3M
+c8296865-8683-4b8c-b1b0-c635983b3136,a74e7e07-a701-4ac1-86ed-dffa4037074f,VL_Height-6M
+c8296865-8683-4b8c-b1b0-c635983b3136,43078fad-9ed9-42ef-b076-e79569288021,VL_Height-9M
+c8296865-8683-4b8c-b1b0-c635983b3136,a8261a01-d14f-43ec-8095-b60340667992,VL_Height-12M
+8b33d598-1de0-4185-bed1-51dd89ad1127,3d5bd788-9728-4593-b8b9-035b7bca8a1e,VL_HeadCircunference-ERN
+8b33d598-1de0-4185-bed1-51dd89ad1127,c537bee2-7bd6-4553-a91f-1ff257d75830,VL_HeadCircunference-ENTRADA PosCang
+8b33d598-1de0-4185-bed1-51dd89ad1127,2d545f17-800e-473b-833d-cebb1cb68a6d,VL_HeadCircunference-40S
+8b33d598-1de0-4185-bed1-51dd89ad1127,0c8b1f51-9742-4b3e-889d-23c7568f4177,VL_HeadCircunference-3M
+8b33d598-1de0-4185-bed1-51dd89ad1127,13610795-37a2-41b2-b246-79a74052930e,VL_HeadCircunference-6M
+8b33d598-1de0-4185-bed1-51dd89ad1127,81c358ad-19dd-430f-a49b-6013c9092a8e,VL_HeadCircunference-9M
+8b33d598-1de0-4185-bed1-51dd89ad1127,e934708b-fab4-48f7-a369-a23cd0da5576,VL_HeadCircunference-12M
+3990c391-90fc-49a3-ae5c-20ab55851019,64111aef-c894-4ad3-8a16-bf45f657465e,VL_Nutrition-ENTRADA PosCang
+3990c391-90fc-49a3-ae5c-20ab55851019,ec4f49fc-8613-4c37-973c-7eb44a8db8da,VL_Nutrition-40S
+3990c391-90fc-49a3-ae5c-20ab55851019,4ddfe868-3cba-4eea-a322-59523dafe8aa,VL_Nutrition-3M
+3990c391-90fc-49a3-ae5c-20ab55851019,894c8bb7-5b29-40fb-9f5f-ddb4ee8ceafb,VL_Nutrition-6M
+3990c391-90fc-49a3-ae5c-20ab55851019,e9802669-fdd6-419d-810b-d9fe01e1ed56,VL_Nutrition-9M
+3990c391-90fc-49a3-ae5c-20ab55851019,9e78b4e7-4530-4b2f-82ea-c0026616d862,VL_Nutrition-12M

@@ -32,21 +32,6 @@ def inicializar_dataframes ():
     df_categorias=df_variables[cols_cat]
 
     print('inicialización de dataframes exitosa')
-
-
-def inicializar_dimensiones ():
-
-    # Grupos - Puentes
-    grupoOperacion = pd.DataFrame(columns=['id'])
-    puenteVariableOperacion = pd.DataFrame(columns=['idVariable','idGrupoOperacion'])
-    
-    
-
-
-    # Tabla de hechos
-    hechoRegistrarVariable = pd.DataFrame (columns=['idVariable', 'idFechaRegistro','idFase','idInicioFase','idFinFase','idEpisodio',
-                                                    'idInicioEpisodio','idFinEpisodio','idGrupoTemaInteres','idGreupoVariableLongitudinal',
-                                                    'idGrupoCategoria','idGrupoOperacion'])
     
 
 #### Dimensión Prefijo ---------------------------------------------------------------------------------
@@ -495,4 +480,4 @@ def poblar_tabla_hechos(variable,fase,evento,episodio,temasInteres, puenteVariab
                                                     'idInicioEpisodio','idFinEpisodio','idGrupoTemaInteres',
                                                     'idGrupoVariableLongitudinal',
                                                     'idGrupoCategoria','idGrupoOperacion'])
-   return hechoRegistrarVariable
+   return hechoRegistrarVariable,puenteCategoria,grupoValorCategoria,puenteTemaInteres,grupoTemaInteres

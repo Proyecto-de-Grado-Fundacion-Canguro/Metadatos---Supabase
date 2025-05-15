@@ -1,5 +1,5 @@
 id,descripcion,fechaInicio,fechaFin,activo,nombreAnalisis,nombreBD
-31a253cd-4698-47c8-ad2f-fe0b981a884f,datos del bebé en potencial hospitalización después del parto (hospitalizaciones/UCI/…),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,Hosp. Post parto
-ee41a146-c954-487e-af38-16ca2210f558,datos del bebé durante el episodio de posición canguro. Datos desde la entrada al PMC hasta la salidad de la posición Canguro (PC),2025-01-01,9999-12-31 00:00:00,True,PC-POS,Posición Canguro
-235cafc0-3334-4aa9-b42b-1c09d1af5d1e,"datos del bebé en potencial hospitalización, después de las 40 sem EG(?)",2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización no PostParto
-d8de830c-b2b8-44f8-887c-547aafd0456a,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Suministro de oxígeno
+b2dfc883-102f-4ca1-a9e7-b29c6c35ccae,datos del bebé en potencial hospitalización después del parto (hospitalizaciones/UCI/…),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,Hosp. Post parto
+2d6e4dd6-fc31-4ff9-988d-b1a44032cb7b,datos del bebé durante el episodio de posición canguro. Datos desde la entrada al PMC hasta la salidad de la posición Canguro (PC),2025-01-01,9999-12-31 00:00:00,True,PC-POS,Posición Canguro
+155a693b-5ec6-452b-a395-260420caa24e,"datos del bebé en potencial hospitalización, después de las 40 sem EG(?)",2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización no PostParto
+8b67c787-ba95-47c4-a0c6-47b6edd825c4,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Suministro de oxígeno

@@ -38,9 +38,13 @@ def main():
     exportar_csv(puenteVls,'puent variable longitudinal')
     exportar_csv(grupoVls, 'grupo variable longitudinal')
 
-    tabla_hechos=poblar_tabla_hechos(df_var,df_fase_load,df_evento_load,df_episodios_load,df_ti,
+    tabla_hechos,puenteCategoria,grupoValorCategoria,puenteTemaInteres,grupoTemaInteres=poblar_tabla_hechos(df_var,df_fase_load,df_evento_load,df_episodios_load,df_ti,
                                      puenteVls,df_valorCategoria)
     exportar_csv(tabla_hechos,'tabla hechos')
+    exportar_csv(puenteCategoria,'puente categoria')
+    exportar_csv(grupoValorCategoria,'grupoValorCategoria')
+    exportar_csv(puenteTemaInteres,'puente tema de interes')
+    exportar_csv(grupoTemaInteres,'grupo tema de interes')
 
 if __name__ == "__main__":
     main()
