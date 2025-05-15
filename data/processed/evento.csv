@@ -1,0 +1,14 @@
+id,nombre,idVariableFecha,descripcion,fechaInicio,fechaFin,activo
+51aeceec-4e8e-46f8-aaa8-ded487152d9c,registro en el sistema,,,2025-01-01,9999-12-31 00:00:00,True
+f919bbee-4a6a-4147-bf68-45a0ee38f279,registro del entorno,,,2025-01-01,9999-12-31 00:00:00,True
+7cf614d0-6514-4c54-b383-49e55b2bd94d,CP_MesInicCP,9aec9202-053e-4576-a251-89568c889c0f,Mes de inicio del control prenatal,2025-01-01,9999-12-31 00:00:00,True
+9db55f7b-9b5c-49b2-95b9-0dc8f9c9e280,PA_FechaParto,94540a9a-c37c-4394-9ea6-90d70d1b80db,Fecha del parto,2025-01-01,9999-12-31 00:00:00,True
+f9908dc3-0b43-4134-b06e-465960aae938,PCANG_FechaVisita40semV215,59053f12-c4ff-4052-979d-b6ce1060d682,Fecha de visita 40 sem EG,2025-01-01,9999-12-31 00:00:00,True
+7d5ad3c5-7b3e-4cb2-89f6-d41932689815,SEG_EdadVisita3mECV260,396f673c-1bfa-4729-b1d0-7dd61ab0ebcb,Edad a la visita de los 3 meses,2025-01-01,9999-12-31 00:00:00,True
+61df71fc-687d-4f93-96ba-d697f2891bc0,SEG_EdadVisita6mECV303,31fb0cf1-e738-4ded-b233-6821eca8bf14,Edad a la visita de los 6 meses,2025-01-01,9999-12-31 00:00:00,True
+e11d9349-de5d-4964-bd67-755c30e6269f,SEG_EdadVisita9mECV346,25101350-a7c8-46b5-8c81-ef36b7db35f6,Edad a la visita de los 9 meses,2025-01-01,9999-12-31 00:00:00,True
+d82776cc-04dd-4ab3-bb7f-a35468fb892c,salidaPMCI,,,2025-01-01,9999-12-31 00:00:00,True
+bc7d5310-d36d-4473-b2de-b57f73b1ae6a,HD_FechaEntradaURN,a0423576-9113-4e0c-95b1-9f10f4eb47ab,Fecha de Entrada en la URN,2025-01-01,9999-12-31 00:00:00,True
+11a23515-53a1-4042-9aeb-e4e6b5eaac20,PCANG_EGentradaPMC,4da2edb4-920d-4fdd-8737-0cbfa339e9d3,EDAD GESTACIONAL ENTRADA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True
+8835df08-723f-48c8-a3ab-04b9edb4aa66,HD_FechaSalida,,,2025-01-01,9999-12-31 00:00:00,True
+65f31a39-5639-4128-bff9-8f77aaa0f925,PCANG_EGaSalPMC,52880005-c523-4029-bfbe-eb72f25bd091,EDAD GESTACIONAL SALIDA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True

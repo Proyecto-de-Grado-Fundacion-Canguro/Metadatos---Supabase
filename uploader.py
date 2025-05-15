@@ -10,7 +10,6 @@ from postgrest import APIError
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def sanitize_df(df: pd.DataFrame) -> pd.DataFrame:
-    # Reemplaza inf/-inf por None, y convierte NaN a None
     return (
         df
         .replace([np.inf, -np.inf], None)
@@ -43,3 +42,15 @@ def seed_prefijo():
     print('cargando dimension Prefijo en supabase')
     df = processor.poblar_prefijo()
     cargar_data(df, "Prefijo", ["id"])
+
+def exportar_csv (df,nombreArchivo, carpeta: str = "data/processed"):
+    if not nombreArchivo.lower().endswith(".csv"):
+        nombreArchivo += ".csv"
+    
+    os.makedirs(carpeta, exist_ok=True)
+    ruta = os.path.join(carpeta, nombreArchivo)
+    
+    df.to_csv(ruta, index=False, encoding="utf-8")
+    
+    print("CSV {nombreArchivo} exportado en: {ruta}")
+    return ruta

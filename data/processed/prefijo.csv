@@ -1,0 +1,14 @@
+id,sigla,descripcion
+2bf9c2cf-29a6-4964-b4e6-450a8950413b,IDEN,IdentificaciOn del sujeto
+81f6b0f3-9243-480e-a1b7-7251ea926690,AC,Adaptacion canguro (En el hospital?)
+24e3a56b-c29d-4b2c-9a7f-286f8b79b80d,CP,Control Prenatal
+13463a7c-9cb3-4281-aaae-3811fa4454ef,CSP,Condicion social
+cabdb469-bc82-4b87-bb48-c4bbf0fe1e5c,ERN,Recien Nacidos
+d9e2b833-d3e8-4886-a0e5-df59345b84b6,HD,Hospitalizacion
+d867f211-ebc2-40bc-a098-26158e48b5f3,PA,Parto
+9885ee1c-9105-4138-969e-e5666760c5e9,NM,Neuromotor
+ac864d63-f3c4-427b-8d12-6ccc63c66c9f,SEG,"Seguimiento (consultas,screening,..?)"
+614b0004-2596-44da-8a08-96321d56d169,PCANG,Posición canguro
+97474850-866d-4245-94d5-e351cde1077c,NUT,Nutricion
+52f02371-342d-4560-ba20-d29e64b15848,CR,Crecimiento
+fe30fa9d-4907-428a-a68f-26042933f8c9,OX,Oxígeno 

@@ -5,7 +5,7 @@ import uuid
 
 
 
-# Inicializar dataframes según el diccionario de variables 
+
 def inicializar_dataframes ():
     """
     Inicializa los dataframes básicos para poder cargar la información de las dimensiones
@@ -22,23 +22,16 @@ def inicializar_dataframes ():
 
     print('inicialización de dataframes exitosa')
 
-# Inicializar dimensiones según sus atributos
-def inicializar_dimensiones ():
-    global episodio,evento,fase,fecha, grupoOperacion,grupoTemaInteres,grupoValorCategoria,grupoVariableLongitudinal
-    global puenteTemaInteres,puenteCategoria,puenteVariableLongitudinal, variable, puenteVariableOperacion, valorCategoria, temaInteres
-    global hechoRegistrarVariable
 
-    
-    
-   
-    fecha= pd.DataFrame(columns=['id','fechaDate','dia','mes','anio'])
-    
+def inicializar_dimensiones ():
+    """
+
+    """
 
     # Grupos - Puentes
     grupoOperacion = pd.DataFrame(columns=['id'])
     puenteVariableOperacion = pd.DataFrame(columns=['idVariable','idGrupoOperacion'])
 
-    temaInteres = pd.DataFrame(columns=['id','nombre','descripcion'])
     grupoTemaInteres = pd.DataFrame(columns=['id'])
     puenteTemaInteres = pd.DataFrame(columns=['idGrupoTemaInteres','idTemaInteres'])
 
@@ -152,6 +145,9 @@ def poblar_variable(df_prefijo):
 
 
 def encontrar_prefijo_por_sigla(sigla: str, prefijo_df: pd.DataFrame) -> str | None:
+    """
+     Encontrar el prefijo de una dimensión y devolver su id
+    """
     sigla_upper = sigla.upper()
     mask = prefijo_df["sigla"].fillna("").str.upper() == sigla_upper
     matches = prefijo_df[mask]
@@ -165,8 +161,6 @@ def poblar_evento(variable_df):
     inicio_anio = pd.Timestamp(year=2025, month=1, day=1)
     fin_anio    = pd.Timestamp(year=9999, month=12, day=31)
     evs=obtener_lista_episodios()
-    print('1111111111111111111')
-    print(evs)
     for ev in evs:
         info=obtener_info_variable(variable_df,ev)
         if info is None:
@@ -190,6 +184,9 @@ def poblar_evento(variable_df):
     return evento
 
 def obtener_lista_episodios():
+    """
+    Obtener una lista con todos los episodios posibles de fase y episodio
+    """
     eventos_fases=(
         pd.concat([
             df_fases['Evento inicial (id-var)'],
@@ -219,6 +216,9 @@ def obtener_lista_episodios():
 
 
 def obtener_info_variable (variable_df,nombreAnalisis):
+    """
+    A partir del nombre de analisis de una variable obtener su id y su descripcion
+    """
     var=variable_df[variable_df['nombreAnalisis']==nombreAnalisis]
     if var.empty:
         return None
@@ -229,12 +229,11 @@ def obtener_info_variable (variable_df,nombreAnalisis):
     return [id_val, desc_corta]
 
 #### Dimensión Fecha ---------------------------------------------------------------------------------
-
 def poblar_fecha (inicio: str = "2025-01-01"):
     date = pd.to_datetime(inicio).date()
-    dia  = fecha.day
-    mes  = fecha.month
-    anio = fecha.year
+    dia  = date.day
+    mes  = date.month
+    anio = date.year
 
     id_str = f"{dia:02d}{mes:02d}{anio}"
 
