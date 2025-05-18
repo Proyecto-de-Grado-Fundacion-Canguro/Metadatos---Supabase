@@ -1,8 +1,8 @@
 id,descripcion,fechaInicio,fechaFin,activo,nombreAnalisis,nombreBD
-c65f22de-9870-4553-b583-3c66ac325304,Inicio del KMC en Sala de partos,2025-01-01,9999-12-31 00:00:00,True,MMC-iERN,MMC-inmediato
-9b52f9b4-73a9-4302-a597-8d237cb0a259,MMC en casa con seguimiento cercano,2025-01-01,9999-12-31 00:00:00,True,MMC-enCASA,MMC-Ambulatorio
-d5576782-f0a2-4e36-97ef-a1a785439200,MMC en la Unidad de RN,2025-01-01,9999-12-31 00:00:00,True,MMC-URN,MMC-en URN
-928db6be-12b3-4114-99f5-6907e633272e,MMC en Alojamiento Hospitalario/Observacion,2025-01-01,9999-12-31 00:00:00,True,MMC-enHOSP,MMC-AlojaHosp
-f1836b6d-db42-4411-993f-50c5985d2643,Hospitalización NO-Neonato,2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización NO-Neonato
-ca47e2fe-a5b1-4f0e-b3b9-2af4f3600f7b,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Infante con Oxígeno
-9e7e5fb2-84cc-4172-b2cf-03503ee1d256,URN - no canguro(?),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,HospitalizacionURN
+54a14420-42c0-4bff-a671-53149de0f9d1,Inicio del KMC en Sala de partos,2025-01-01,9999-12-31 00:00:00,True,MMC-iERN,MMC-inmediato
+f9dc8932-24a4-4e11-b72e-afa45be4d507,MMC en casa con seguimiento cercano,2025-01-01,9999-12-31 00:00:00,True,MMC-enCASA,MMC-Ambulatorio
+34279dc5-2e0c-443f-b881-e97a5b5ca675,MMC en la Unidad de RN,2025-01-01,9999-12-31 00:00:00,True,MMC-URN,MMC-en URN
+222cf66b-32ea-4f29-a57e-fd8ef0b7ea11,MMC en Alojamiento Hospitalario/Observacion,2025-01-01,9999-12-31 00:00:00,True,MMC-enHOSP,MMC-AlojaHosp
+1c53e1fc-2903-4965-9084-1b4d10cf202d,Hospitalización NO-Neonato,2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización NO-Neonato
+c01f8b85-00c0-49b8-b63c-d784c8b6a4ea,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Infante con Oxígeno
+3cf5d2f1-d48f-4043-a6a4-adb4a3fbef1a,URN - no canguro(?),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,HospitalizacionURN

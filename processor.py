@@ -352,6 +352,13 @@ def poblar_tabla_hechos(variable,fase,evento,episodio,temasInteres, puenteVariab
        row_var=variable[variable ['nombreAnalisis']==str(row['ID-VAR'])]
        id_var= str(row_var['id'].iloc[0])
 
+       #valor minimo y maximo
+       valor_min=row['VAR-MIN-VALUE']
+       valor_max=row['VAR-MAX-VALUE']
+
+       #valor no conocido
+       valor_no_conocido=row['VAR-MISSING-VALUE']
+
        #id fecha
        id_fecha='01012025'
 
@@ -480,11 +487,14 @@ def poblar_tabla_hechos(variable,fase,evento,episodio,temasInteres, puenteVariab
            'idGrupoTemaInteres':grupo_tOf,
            'idGrupoVariableLongitudinal':id_longitudinal,
            'idGrupoCategoria':grupo_cats,
-           'idGrupoOperacion':id_grupo_operacion_null
+           'idGrupoOperacion':id_grupo_operacion_null,
+           'valorMin':valor_min,
+           'valorMax':valor_max,
+           'valorNoConocido':valor_no_conocido
        })
 
    hechoRegistrarVariable = pd.DataFrame (filas,columns=['idVariable', 'idFechaRegistro','idFase','idInicioFase','idFinFase','idEpisodio',
                                                     'idInicioEpisodio','idFinEpisodio','idGrupoTemaInteres',
                                                     'idGrupoVariableLongitudinal',
-                                                    'idGrupoCategoria','idGrupoOperacion'])
+                                                    'idGrupoCategoria','idGrupoOperacion','valorMin','valorMax','valorNoConocido'])
    return hechoRegistrarVariable,puenteCategoria,grupoValorCategoria,puenteTemaInteres,grupoTemaInteres

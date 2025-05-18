@@ -43,7 +43,7 @@ def seed_prefijo():
     df = processor.poblar_prefijo()
     cargar_data(df, "Prefijo", ["id"])
 
-def exportar_csv (df,nombreArchivo, carpeta: str = "data/processed"):
+def exportar_csv (df,nombreArchivo, carpeta: str = "data\processed"):
     if not nombreArchivo.lower().endswith(".csv"):
         nombreArchivo += ".csv"
     
@@ -52,5 +52,5 @@ def exportar_csv (df,nombreArchivo, carpeta: str = "data/processed"):
     
     df.to_csv(ruta, index=False, encoding="utf-8")
     
-    print("CSV {nombreArchivo} exportado en: {ruta}")
+    print(f"CSV {nombreArchivo} exportado en: {ruta}")
     return ruta
