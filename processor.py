@@ -21,7 +21,6 @@ def inicializar_dataframes ():
 
     file_vls=pd.ExcelFile(LONG_PATH)
     df_vLongitudinales=pd.read_excel(file_vls, sheet_name='VLs-Definition')
-    df_vLongitudinales.rename(columns={'Unnamed: 0': 'descripcion'}, inplace=True)
 
     cols_cat = [
     "VAL1", "SHORT-NAME1", "VAL2", "SHORT-NAME2",
@@ -266,27 +265,35 @@ def poblar_valorCategoria():
     return valorCategoria
 
 #### Dimensión Puente Variable Longitudinal ---------------------------------------------------------------------------------
-def poblar_puente_y_grupo_variable_longitudinal(df_variable):
+def poblar_puente_y_grupo_variable_longitudinal (df_variable):
     n = len(df_vLongitudinales)
     ids_grupoVLs = [str(uuid.uuid4()) for _ in range(n)]
-    cont=0
     filas=[]
-    for index, row in df_vLongitudinales.iterrows():
-        for col in df_vLongitudinales.columns:
-             if col!='descripcion':
-                nombre_variable = row[col]  
-                var = df_variable[df_variable['nombreBD'] == nombre_variable]
-                if not var.empty:
-                    id_variable = var.iloc[0]['id']
-                    filas.append({
-                        'idGrupoVariable': ids_grupoVLs[cont],
-                        'idVariableLongitudinal':id_variable,
-                        'descripcion':str(row['descripcion'])+'-'+str(col)
+    filas_grupos=[]
+    for row in range(1,len(df_vLongitudinales)):
+        grupo_nombre = df_vLongitudinales.iloc[row, 0]  
+        filas_grupos.append({
+                        'id': ids_grupoVLs[row],
+                        'nombre': grupo_nombre
                     })
-        cont+=1
-    puenteVariableLongitudinal = pd.DataFrame(filas,columns=['idGrupoVariable','idVariableLongitudinal','descripcion'])
-    grupoVariableLongitudinal= pd.DataFrame(ids_grupoVLs,columns=['id'])
+        for col in range(1,len(df_vLongitudinales.columns)):
+            nombre_variable=df_vLongitudinales.iloc[row,col]
+            var = df_variable[df_variable['nombreBD'] == nombre_variable]
+            if not var.empty:
+                id_variable=var.iloc[0]['id']
+                fase=df_vLongitudinales.iloc[0,col]
+                abcise=df_vLongitudinales.iloc[0,col]
+                filas.append({
+                    'idGrupoVariable': ids_grupoVLs[row],
+                    'idVariableLongitudinal':id_variable,
+                    'descripcion':str(fase),
+                    'abcisa':abcise
+                })
+                
+    puenteVariableLongitudinal = pd.DataFrame(filas,columns=['idGrupoVariable','idVariableLongitudinal','descripcion','abcisa'])
+    grupoVariableLongitudinal = pd.DataFrame(filas_grupos, columns=['id','nombre'])
     return puenteVariableLongitudinal,grupoVariableLongitudinal
+
 
 #### Dimensión Puente Variable Longitudinal -------------------------------------------------------------------------------
 def retornar_valores_categoria_por_variable(row,df_valorcategoria):

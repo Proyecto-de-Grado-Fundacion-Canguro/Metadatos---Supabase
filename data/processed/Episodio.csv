@@ -1,5 +1,8 @@
 id,descripcion,fechaInicio,fechaFin,activo,nombreAnalisis,nombreBD
-b2dfc883-102f-4ca1-a9e7-b29c6c35ccae,datos del bebé en potencial hospitalización después del parto (hospitalizaciones/UCI/…),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,Hosp. Post parto
-2d6e4dd6-fc31-4ff9-988d-b1a44032cb7b,datos del bebé durante el episodio de posición canguro. Datos desde la entrada al PMC hasta la salidad de la posición Canguro (PC),2025-01-01,9999-12-31 00:00:00,True,PC-POS,Posición Canguro
-155a693b-5ec6-452b-a395-260420caa24e,"datos del bebé en potencial hospitalización, después de las 40 sem EG(?)",2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización no PostParto
-8b67c787-ba95-47c4-a0c6-47b6edd825c4,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Suministro de oxígeno
+c65f22de-9870-4553-b583-3c66ac325304,Inicio del KMC en Sala de partos,2025-01-01,9999-12-31 00:00:00,True,MMC-iERN,MMC-inmediato
+9b52f9b4-73a9-4302-a597-8d237cb0a259,MMC en casa con seguimiento cercano,2025-01-01,9999-12-31 00:00:00,True,MMC-enCASA,MMC-Ambulatorio
+d5576782-f0a2-4e36-97ef-a1a785439200,MMC en la Unidad de RN,2025-01-01,9999-12-31 00:00:00,True,MMC-URN,MMC-en URN
+928db6be-12b3-4114-99f5-6907e633272e,MMC en Alojamiento Hospitalario/Observacion,2025-01-01,9999-12-31 00:00:00,True,MMC-enHOSP,MMC-AlojaHosp
+f1836b6d-db42-4411-993f-50c5985d2643,Hospitalización NO-Neonato,2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización NO-Neonato
+ca47e2fe-a5b1-4f0e-b3b9-2af4f3600f7b,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Infante con Oxígeno
+9e7e5fb2-84cc-4172-b2cf-03503ee1d256,URN - no canguro(?),2025-01-01,9999-12-31 00:00:00,True,HD-NEONATO,HospitalizacionURN
