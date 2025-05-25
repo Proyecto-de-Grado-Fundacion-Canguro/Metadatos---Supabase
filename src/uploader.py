@@ -1,7 +1,8 @@
 import os
-import processor as processor
-import supabase_manager as manager
-from processor import *
+import src.processor as processor
+import src.supabase_manager as manager
+from src.processor import *
+from  src.config import DICT_PATH, LONG_PATH
 
 
 def seed_prefijo():
@@ -20,6 +21,7 @@ def exportar_csv (df,nombreArchivo, carpeta: str = "data\processed"):
     
     print(f"CSV {nombreArchivo} exportado en: {ruta}")
     return ruta
+
 
 
 def charge_all_csv():

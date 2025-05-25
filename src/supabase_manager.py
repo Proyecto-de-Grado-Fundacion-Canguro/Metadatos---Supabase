@@ -1,6 +1,6 @@
 import sys
 import os
-from datetime import datetime
+import datetime as dt
 from postgrest import APIError
 from supabase import create_client
 import numpy as np
@@ -21,13 +21,14 @@ def cargar_data(df, nombre_tabla, cols_conflicto):
     df = df.where(pd.notnull(df), None)
 
     def safe_convert(value):
-        if isinstance(value, (pd.Timestamp, datetime.datetime, datetime.date)):
+        if isinstance(value, (pd.Timestamp, dt.datetime, dt.date)):
             return value.strftime('%Y-%m-%d')
         elif pd.isna(value):
             return None
         return value
 
-    records = df.applymap(safe_convert).to_dict(orient="records")
+    records = df.apply(lambda col: col.map(safe_convert)).to_dict(orient="records")
+
 
     try:
         response = (

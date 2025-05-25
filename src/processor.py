@@ -1,6 +1,6 @@
 #Transforma los datos en un csv - cada csv es una dimensión
-import os, pandas as pd
-from config import DICT_PATH, PROCESSED_DIR, LONG_PATH
+import pandas as pd
+from src.config import DICT_PATH, LONG_PATH
 import uuid
 
 

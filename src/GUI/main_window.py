@@ -6,7 +6,8 @@ import tkinter.messagebox as messagebox
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 import customtkinter as ctk
-from src.GUI.forms.evento_forms import formulario_crear_evento,formulario_editar_evento
+from src.GUI.forms.evento_forms import formulario_crear_evento, formulario_editar_evento
+from src.GUI.forms.diccionario_forms import formulario_diccionario
 
 # Tema y estilo moderno
 ctk.set_appearance_mode("dark")
@@ -22,7 +23,7 @@ tabs = ctk.CTkTabview(app)
 tabs.pack(padx=20, pady=20, fill="both", expand=True)
 
 # Crear pestañas
-for nombre in ["Variable", "Episodio", "Fase", "Evento"]:
+for nombre in ["Diccionario", "Variable", "Episodio", "Fase", "Evento"]:
     tabs.add(nombre)
 
 def agregar_botones(tab_name, acciones):
@@ -41,6 +42,9 @@ def agregar_botones(tab_name, acciones):
         ctk.CTkButton(frame, text=texto, command=inner).pack(pady=8)
 
 # Botones para cada pestaña
+acciones_diccionario = [
+    ("Cargar diccionario", lambda: formulario_diccionario(app))
+]
 acciones_variable = [
     ("Añadir Variable", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo")),
     ("Añadir Historia a Variable", lambda: messagebox.showinfo("En desarrollo", "Historia a Variable en desarrollo")),
@@ -56,10 +60,11 @@ acciones_fase = [
     ("Editar Fase", lambda: messagebox.showinfo("En desarrollo", "Editar Fase en desarrollo"))
 ]
 acciones_evento = [
-    ("Añadir Evento", formulario_crear_evento),  # 👈 Sin paréntesis
-    ("Editar Evento", formulario_editar_evento)   # 👈 Sin paréntesis
+    ("Añadir Evento", formulario_crear_evento),
+    ("Editar Evento", formulario_editar_evento)
 ]
 
+agregar_botones("Diccionario", acciones_diccionario)
 agregar_botones("Variable", acciones_variable)
 agregar_botones("Episodio", acciones_episodio)
 agregar_botones("Fase", acciones_fase)
