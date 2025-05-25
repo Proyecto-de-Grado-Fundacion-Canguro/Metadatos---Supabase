@@ -4,8 +4,6 @@ from config import DICT_PATH, PROCESSED_DIR, LONG_PATH
 import uuid
 
 
-
-
 def inicializar_dataframes ():
     """    Inicializa los dataframes del diccionario para poder cargar la información de las dimensiones
     """
@@ -13,7 +11,6 @@ def inicializar_dataframes ():
     
     file_dict=pd.ExcelFile(DICT_PATH)
     df_variables=pd.read_excel(file_dict, sheet_name='VARS-(KMC70k)')
-    print(df_variables)
     df_fases=pd.read_excel(file_dict, sheet_name='Phases')
     df_episodios=pd.read_excel(file_dict, sheet_name='Episodes')
     df_temasInteres=pd.read_excel(file_dict, sheet_name='TopicsOfInterest')
@@ -67,36 +64,56 @@ def poblar_fase():
         if (i==len(df_fases)-1):
             ultimo= True
         filas.append({
-            'id':str(uuid.uuid4()),
-            'nombreAnalisis':row['NOMBRE CORTO'],
-            'nombreBD':row['ID-Phase'],
-            'descripcion':row['DESCRIPCION'],
-            'ultimo':ultimo,
-            'fechaInicio':inicio_anio,
-            'fechaFin': fin_anio,
-            'activo':True,
-            'numFase':row['Number-Phase']
+            'id': str(uuid.uuid4()),
+            'nombre_analisis': row['NOMBRE CORTO'],
+            'nombre_bd': row['ID-Phase'],
+            'descripcion': row['DESCRIPCION'],
+            'ultimo': ultimo,
+            'fecha_inicio': inicio_anio,
+            'fecha_fin': fin_anio,
+            'activo': True,
+            'num_fase': row['Number-Phase']
         })
-    fase = pd.DataFrame(filas,columns=['id','nombreAnalisis','nombreBD','descripcion','ultimo','fechaInicio','fechaFin','activo','numFase'])
+    fase = pd.DataFrame(filas,columns=['id','nombre_analisis','nombre_bd','descripcion','ultimo','fecha_inicio','fecha_fin','activo','num_fase'])
     return fase
 
 #### Dimensión Episodio ---------------------------------------------------------------------------------
-def poblar_episodio():
-    filas=[]
+def poblar_episodio(evento_df):
+    filas = []
     inicio_anio = pd.Timestamp(year=2025, month=1, day=1)
-    fin_anio    = pd.Timestamp(year=9999, month=12, day=31)
-    for _,row in df_episodios.iterrows():
-        filas.append({
-            'id':str(uuid.uuid4()),
-            'descripcion':row['DESCRIPCION'],
-            'fechaInicio':inicio_anio,
-            'fechaFin':fin_anio,
-            'activo':True,
-            'nombreAnalisis':row['ID-Episode'],
-            'nombreBD':row['NOMBRE CORTO']
-        })
-    episodio = pd.DataFrame(filas,columns=['id','descripcion','fechaInicio','fechaFin','activo','nombreAnalisis','nombreBD'])
+    fin_anio = pd.Timestamp(year=9999, month=12, day=31)
+
+    evento_df['nombre'] = evento_df['nombre'].fillna('').str.strip().str.lower()
+
+    for _, row in df_episodios.iterrows():
+        if pd.notna(row['DESCRIPCION']):
+            nombre_inicio = str(row['Evento inicial (id-var)']).strip().lower()
+            nombre_fin = str(row['Evento-final (id-var)']).strip().lower()
+
+            evento_inicio = evento_df[evento_df['nombre'] == nombre_inicio]
+            evento_fin = evento_df[evento_df['nombre'] == nombre_fin]
+
+            id_evento_inicio = evento_inicio.iloc[0]['id'] if not evento_inicio.empty else None
+            id_evento_fin = evento_fin.iloc[0]['id'] if not evento_fin.empty else None
+
+            filas.append({
+                'id': str(uuid.uuid4()),
+                'descripcion': row['DESCRIPCION'].strip(),
+                'fecha_inicio': inicio_anio,
+                'fecha_fin': fin_anio,
+                'activo': True,
+                'nombre_analisis': row['ID-Episode'],
+                'nombre_bd': row['NOMBRE CORTO'],
+                'id_evento_inicio': id_evento_inicio,
+                'id_evento_fin': id_evento_fin
+            })
+
+    episodio = pd.DataFrame(filas, columns=[
+        'id', 'descripcion', 'fecha_inicio', 'fecha_fin', 'activo',
+        'nombre_analisis', 'nombre_bd', 'id_evento_inicio', 'id_evento_fin'
+    ])
     return episodio
+
 
 #### Dimensión Variable ---------------------------------------------------------------------------------
 def poblar_variable(df_prefijo):
@@ -107,25 +124,22 @@ def poblar_variable(df_prefijo):
         sigla=raw_str.split("_", 1)[0]
         prefix=encontrar_prefijo_por_sigla(sigla,df_prefijo)
         filas.append({
-            'id':str(uuid.uuid4()),
-            'nombreBD':row['NOMBRE EN LA BdeD'],
-            'nombreAnalisis':row['ID-VAR'],
-            'descripcionCorta':row['VAR-SHORT DESCRIPTION'],
-            'descripcionLarga':row['VAR-LONG DESCRIPTION'],
-            'unidades':row['UNITS'],
-            'tipoDato':row['VAR-TYPE'],
-            'tipoVariable':'',
-            'nivelMedicion':'',
-            'basica': True, #TODO: preguntar
-            'longitudinal': True, #TODO: cargar de archivo longitudinal
+            'id': str(uuid.uuid4()),
+            'nombre_bd': row['NOMBRE EN LA BdeD'],
+            'nombre_analisis': row['ID-VAR'],
+            'descripcion_corta': row['VAR-SHORT DESCRIPTION'],
+            'descripcion_larga': row['VAR-LONG DESCRIPTION'],
+            'unidades': row['UNITS'],
+            'tipo_dato': row['VAR-TYPE-prim'],
+            'nivel_medicion': row['VAR-TYPE-sec'],
+            'basica': True,
+            'longitudinal': True,
             'derivada': False,
-            'variableObjetivo': False, 
-            'edadCorregida': False,
             'impacto': False,
-            'idPrefijo':prefix
+            'id_prefijo': prefix
         })
-    variable= pd.DataFrame(filas,columns=['id','nombreBD','nombreAnalisis','descripcionCorta','descripcionLarga','unidades','tipoDato',
-                                    'tipoVariable','nivelMedicion','basica','longitudinal','derivada','variableObjetivo','edadCorregida','impacto','idPrefijo'])
+    variable= pd.DataFrame(filas,columns=['id','nombre_bd','nombre_analisis','descripcion_corta','descripcion_larga','unidades','tipo_dato',
+                                          'nivel_medicion','basica','longitudinal','derivada','impacto','id_prefijo'])
     return variable
 
 
@@ -154,18 +168,17 @@ def poblar_evento(variable_df):
             id_var, desc_corta = info
 
         filas.append({
-            "id":               str(uuid.uuid4()),
-            "nombre":           ev,
-            "idVariableFecha":       id_var,
+            "id": str(uuid.uuid4()),
+            "nombre": ev,
+            "id_variable_fecha": id_var,
             "descripcion": desc_corta,
-            "fechaInicio":      inicio_anio,
-            "fechaFin":         fin_anio,
-            "activo":           True
+            "fecha_inicio": inicio_anio,
+            "fecha_fin": fin_anio,
+            "activo": True
 
         })
     
-    evento = pd.DataFrame(filas,columns=['id','nombre','idVariableFecha','descripcion','fechaInicio','fechaFin','activo']) 
-    print(evento)
+    evento = pd.DataFrame(filas,columns=['id','nombre','id_variable_fecha','descripcion','fecha_inicio','fecha_fin','activo']) 
     return evento
 
 def obtener_lista_episodios():
@@ -204,12 +217,12 @@ def obtener_info_variable (variable_df,nombreAnalisis):
     """
     A partir del nombre de analisis de una variable obtener su id y su descripcion
     """
-    var=variable_df[variable_df['nombreAnalisis']==nombreAnalisis]
+    var=variable_df[variable_df['nombre_analisis']==nombreAnalisis]
     if var.empty:
         return None
     fila = var.iloc[0]
     id_val      = fila['id']
-    desc_corta  = fila['descripcionCorta']
+    desc_corta  = fila['descripcion_corta']
     
     return [id_val, desc_corta]
 
@@ -223,11 +236,11 @@ def poblar_fecha (inicio: str = "2025-01-01"):
     id_str = f"{dia:02d}{mes:02d}{anio}"
 
     fecha = pd.DataFrame([{
-        "id":         id_str,
-        "fechaDate":  date,
-        "dia":        dia,
-        "mes":        mes,
-        "anio":       anio
+        "id": f"{date.day:02d}{date.month:02d}{date.year}",
+        "fecha_date": date,
+        "dia": date.day,
+        "mes": date.month,
+        "anio": date.year
     }])
 
     return fecha
@@ -261,7 +274,6 @@ def poblar_valorCategoria():
             'descripcion':data['descripcion']
         })
     valorCategoria = pd.DataFrame(filas,columns=['id','codificacion','descripcion'])
-    print(valorCategoria)
     return valorCategoria
 
 #### Dimensión Puente Variable Longitudinal ---------------------------------------------------------------------------------
@@ -278,19 +290,19 @@ def poblar_puente_y_grupo_variable_longitudinal (df_variable):
                     })
         for col in range(1,len(df_vLongitudinales.columns)):
             nombre_variable=df_vLongitudinales.iloc[row,col]
-            var = df_variable[df_variable['nombreBD'] == nombre_variable]
+            var = df_variable[df_variable['nombre_bd'] == nombre_variable]
             if not var.empty:
                 id_variable=var.iloc[0]['id']
-                fase=df_vLongitudinales.iloc[0,col]
+                fase=df_vLongitudinales.iloc[1,col]
                 abcise=df_vLongitudinales.iloc[0,col]
                 filas.append({
-                    'idGrupoVariable': ids_grupoVLs[row],
-                    'idVariableLongitudinal':id_variable,
+                    'id_grupo_variable': ids_grupoVLs[row],
+                    'id_variable_longitudinal':id_variable,
                     'descripcion':str(fase),
                     'abcisa':abcise
                 })
                 
-    puenteVariableLongitudinal = pd.DataFrame(filas,columns=['idGrupoVariable','idVariableLongitudinal','descripcion','abcisa'])
+    puenteVariableLongitudinal = pd.DataFrame(filas,columns=['id_grupo_variable','id_variable_longitudinal','descripcion','abcisa'])
     grupoVariableLongitudinal = pd.DataFrame(filas_grupos, columns=['id','nombre'])
     return puenteVariableLongitudinal,grupoVariableLongitudinal
 
@@ -335,166 +347,126 @@ def retornar_temas_interes_por_variable (row,temasInteres):
     return ids
 
 #### Tabla de hechos Registrar Variable -------------------------------------------------------------------------------
-def poblar_tabla_hechos(variable,fase,evento,episodio,temasInteres, puenteVariableLongitudinal,valorCategoria):
-   ids_grupoCats = [str(uuid.uuid4()) for _ in range(len(variable))]
-   ids_grupoTemas= [str(uuid.uuid4()) for _ in range(len(variable))] 
+def retornar_episodios_por_variable(row, df_episodios):
+    cols_epi = ['ID-Episode-1', 'ID-Episode-2']
+    ids = []
+    for col in cols_epi:
+        if pd.notna(row[col]) and row[col] != ' ':
+            val = str(row[col]).strip()
+            match = df_episodios[df_episodios['nombre_analisis'].fillna('').str.strip() == val]
+            if not match.empty:
+                ids.append(str(match.iloc[0]['id']))
+    return ids
 
-   grupoTemaInteres = pd.DataFrame(columns=['id'])
-   puenteTemaInteres = pd.DataFrame(columns=['idGrupoTemaInteres','idTemaInteres'])
-
-   grupoValorCategoria =pd.DataFrame(columns=['id'])
-   puenteCategoria= pd.DataFrame(columns=['idGrupoValorCategoria','idValorCategoria'])
-
-   filas=[]
-
-   for index,row in df_variables.iterrows():
-       #id variable
-       row_var=variable[variable ['nombreAnalisis']==str(row['ID-VAR'])]
-       id_var= str(row_var['id'].iloc[0])
-
-       #valor minimo y maximo
-       valor_min=row['VAR-MIN-VALUE']
-       valor_max=row['VAR-MAX-VALUE']
-
-       #valor no conocido
-       valor_no_conocido=row['VAR-MISSING-VALUE']
-
-       #id fecha
-       id_fecha='01012025'
-
-       #idFase
-       row_fase = fase[fase['numFase'] == row['#Phase']]
-
-       if not row_fase.empty:
-            # Si hay coincidencia, obtener id_fase
-            id_fase = row_fase.iloc[0]['id']
-
-            # Buscar evento inicio fase
-            row_evento = df_fases[df_fases['Number-Phase'] == row['#Phase']]
-            nombre_evento_inicio_fase = row_evento['Evento inicial (id-var)'].iloc[0]
-            # Filtrar el evento de inicio fase
-            filtered_evento_inicio_fase = evento[evento['nombre'] == nombre_evento_inicio_fase]
-
-            # Verificar si el filtro devuelve resultados
-            if not filtered_evento_inicio_fase.empty:
-                id_inicio_fase = filtered_evento_inicio_fase.iloc[0]['id']
-            else:
-                id_inicio_fase = None  # Asignar None si no se encuentran resultados
+def crear_grupo_y_puente_episodios(index, row, df_episodios, ids_grupo_episodios, puente_episodio, grupo_episodio):
+    ids_epi = retornar_episodios_por_variable(row, df_episodios)
+    grupo_epi = ids_grupo_episodios[index]
+    for epi_id in ids_epi:
+        puente_episodio.loc[len(puente_episodio)] = (grupo_epi, epi_id)
+    grupo_episodio.loc[len(grupo_episodio)] = (grupo_epi)
+    return grupo_epi
 
 
-            # Buscar evento fin fase
-            nombre_evento_fin_fase = row_evento['Evento-final (id-var)'].iloc[0]
-            filtered_evento_fin_fase = evento[evento['nombre'] == nombre_evento_fin_fase]
+def obtener_info_fase(row, fase, evento):
+    row_fase = fase[fase['num_fase'] == row['#Phase']]
+    if row_fase.empty:
+        return None, None, None
+    id_fase = row_fase.iloc[0]['id']
 
-            # Verificar si el filtro devuelve resultados
-            if not filtered_evento_fin_fase.empty:
-                id_fin_fase = filtered_evento_fin_fase.iloc[0]['id']
-            else:
-                id_fin_fase = None  # Asignar None si no se encuentran resultados
-       else:
-            # Si no hay coincidencia, asignar None
-            id_fase = None
-            id_inicio_fase = None
-            id_fin_fase = None
+    row_evento = df_fases[df_fases['Number-Phase'] == row['#Phase']]
+    nombre_evento_inicio_fase = row_evento['Evento inicial (id-var)'].iloc[0] if not row_evento.empty else None
+    nombre_evento_fin_fase = row_evento['Evento-final (id-var)'].iloc[0] if not row_evento.empty else None
 
-       #id episodio
-       row_episodio=episodio[episodio['nombreAnalisis']==row['ID-Episode-1']]
-       if not row_episodio.empty:
-        # Si hay coincidencia, obtener id_episodio
-        id_episodio = row_episodio.iloc[0]['id']
+    evento_inicio = evento[evento['nombre'] == nombre_evento_inicio_fase] if nombre_evento_inicio_fase else pd.DataFrame()
+    evento_fin = evento[evento['nombre'] == nombre_evento_fin_fase] if nombre_evento_fin_fase else pd.DataFrame()
 
-        # Buscar evento inicio episodio
-        row_evento_episodio = df_episodios[df_episodios['Number-Episode'] == row['#Episode-1']]
-        nombre_evento_inicio_episodio = row_evento_episodio['Evento inicial (id-var)'].iloc[0]
-
-        if isinstance(nombre_evento_inicio_episodio, str):
-            nombre_evento_inicio_episodio = nombre_evento_inicio_episodio.strip().lower()
-        else:
-            nombre_evento_inicio_episodio = ""  # Asigna cadena vacía si no es un string
-
-    
-        evento['nombre'] = evento['nombre'].fillna('').str.strip().str.lower()
+    id_inicio = evento_inicio.iloc[0]['id'] if not evento_inicio.empty else None
+    id_fin = evento_fin.iloc[0]['id'] if not evento_fin.empty else None
+    return id_fase, id_inicio, id_fin
 
 
-        if nombre_evento_inicio_episodio:  # Verifica que no esté vacío
-            id_inicio_episodio = evento[evento['nombre'] == nombre_evento_inicio_episodio].iloc[0]['id']
-        else:
-            id_inicio_episodio = None
+def crear_grupo_y_puente_temas(index, row, temas_interes, ids_grupo_temas, puente_tema_interes, grupo_tema_interes):
+    ids_tof = retornar_temas_interes_por_variable(row, temas_interes)
+    grupo_tof = ids_grupo_temas[index]
+    for tof in ids_tof:
+        puente_tema_interes.loc[len(puente_tema_interes)] = (grupo_tof, tof)
+    grupo_tema_interes.loc[len(grupo_tema_interes)] = (grupo_tof)
+    return grupo_tof
 
-        # Buscar evento fin episodio
-        nombre_evento_fin_episodio = row_evento_episodio['Evento-final (id-var)'].iloc[0]
+def crear_grupo_y_puente_categorias(index, row, valor_categoria, ids_grupo_cats, puente_categoria, grupo_valor_categoria):
+    ids_cats = retornar_valores_categoria_por_variable(row, valor_categoria)
+    grupo_cats = ids_grupo_cats[index]
+    for cats in ids_cats:
+        puente_categoria.loc[len(puente_categoria)] = (grupo_cats, cats)
+    grupo_valor_categoria.loc[len(grupo_valor_categoria)] = (grupo_cats)
+    return grupo_cats
+
+def crear_fila_hecho(row_var, row, id_fecha, id_fase, id_inicio_fase, id_fin_fase,
+                     id_grupo_episodio, id_grupo_tema_interes,
+                     id_grupo_variable_longitudinal, id_grupo_categoria):
+    return {
+        'id_variable': str(row_var.iloc[0]['id']),
+        'id_fecha_registro': id_fecha,
+        'id_fase': id_fase,
+        'id_inicio_fase': id_inicio_fase,
+        'id_fin_fase': id_fin_fase,
+        'id_grupo_episodio': id_grupo_episodio,
+        'id_grupo_tema_interes': id_grupo_tema_interes,
+        'id_grupo_variable_longitudinal': id_grupo_variable_longitudinal,
+        'id_grupo_categoria': id_grupo_categoria,
+        'id_grupo_operacion': None,
+        'valor_min': row['VAR-MIN-VALUE'],
+        'valor_max': row['VAR-MAX-VALUE'],
+        'valor_no_conocido': row['VAR-MISSING-VALUE']
+    }
 
 
-        if isinstance(nombre_evento_fin_episodio, str):
-            nombre_evento_fin_episodio = nombre_evento_fin_episodio.strip().lower()
-        else:
-            nombre_evento_fin_episodio = ""  
+def poblar_tabla_hechos(variable, fase, evento, episodio, temas_interes, puente_variable_longitudinal, valor_categoria):
+    ids_grupo_cats = [str(uuid.uuid4()) for _ in range(len(variable))]
+    ids_grupo_temas = [str(uuid.uuid4()) for _ in range(len(variable))]
+    ids_grupo_episodios = [str(uuid.uuid4()) for _ in range(len(variable))]
+
+    grupo_tema_interes = pd.DataFrame(columns=['id'])
+    puente_tema_interes = pd.DataFrame(columns=['id_grupo_tema_interes', 'id_tema_interes'])
+
+    grupo_valor_categoria = pd.DataFrame(columns=['id'])
+    puente_categoria = pd.DataFrame(columns=['id_grupo_valor_categoria', 'id_valor_categoria'])
+
+    grupo_episodio = pd.DataFrame(columns=['id'])
+    puente_episodio = pd.DataFrame(columns=['id_grupo_episodio', 'id_episodio'])
+
+    filas = []
+
+    for index, row in df_variables.iterrows():
+        row_var = variable[variable['nombre_analisis'] == str(row['ID-VAR'])]
+        if row_var.empty:
+            continue
+
+        id_variable = str(row_var.iloc[0]['id'])
+        id_fecha = '01012025'
+
+        id_fase, id_inicio_fase, id_fin_fase = obtener_info_fase(row, fase, evento)
+        id_grupo_episodio = crear_grupo_y_puente_episodios(index, row, episodio, ids_grupo_episodios, puente_episodio, grupo_episodio)
+        id_grupo_tema_interes = crear_grupo_y_puente_temas(index, row, temas_interes, ids_grupo_temas, puente_tema_interes, grupo_tema_interes)
+
+        row_vl = puente_variable_longitudinal[puente_variable_longitudinal['id_variable_longitudinal'] == id_variable]
+        id_grupo_variable_longitudinal = row_vl.iloc[0]['id_grupo_variable'] if not row_vl.empty else None
+
+        id_grupo_categoria = crear_grupo_y_puente_categorias(index, row, valor_categoria, ids_grupo_cats, puente_categoria, grupo_valor_categoria)
+
+        filas.append(crear_fila_hecho(
+            row_var, row, id_fecha, id_fase, id_inicio_fase, id_fin_fase,
+            id_grupo_episodio, id_grupo_tema_interes,
+            id_grupo_variable_longitudinal, id_grupo_categoria
+        ))
+
+    hecho_registrar_variable = pd.DataFrame(filas)
+
+    return (
+        hecho_registrar_variable,
+        puente_categoria, grupo_valor_categoria,
+        puente_tema_interes, grupo_tema_interes,
+        puente_episodio, grupo_episodio
+    )
 
 
-        if nombre_evento_fin_episodio:  
-            id_evento_fin_episodio = evento[evento['nombre'] == nombre_evento_fin_episodio].iloc[0]['id']
-        else:
-            id_evento_fin_episodio = None
-       else:
-            # Si no hay coincidencia, asignar None
-            id_episodio = None
-            id_inicio_episodio = None
-            id_evento_fin_episodio = None
-
-       #id grupo tema interes
-       ids_tOf=retornar_temas_interes_por_variable(row,temasInteres)
-       grupo_tOf=ids_grupoTemas[index] #id grupo tema de interes
-       
-       for tOf in ids_tOf: #poblar grupo tema de interes
-           puenteTemaInteres.loc[len(puenteTemaInteres)]=(
-               grupo_tOf,
-               tOf
-           )
-
-       grupoTemaInteres.loc[len(grupoTemaInteres)]=( #poblar grupo tema interes
-           grupo_tOf
-       )
-        
-       #id grupo variable longitudinal
-       row_vl=puenteVariableLongitudinal[puenteVariableLongitudinal['idVariableLongitudinal']==id_var]
-       if not row_vl.empty:
-           id_longitudinal= row_vl.iloc[0]['idGrupoVariable']
-       else:
-           id_longitudinal=None
-
-       #id grupo categoria
-       ids_cats=retornar_valores_categoria_por_variable(row,valorCategoria)  
-       grupo_cats=ids_grupoCats[index]
-       for cats in ids_cats:
-           puenteCategoria.loc[len(puenteCategoria)]=(
-               grupo_cats,
-               cats
-           )
-
-       grupoValorCategoria.loc[len(grupoValorCategoria)]=(grupo_cats) #poblar grupo valor categoria
-
-       id_grupo_operacion_null=None
-
-       filas.append({
-           'idVariable':id_var,
-           'idFechaRegistro': id_fecha,
-           'idFase':id_fase,
-           'idInicioFase':id_inicio_fase,
-           'idFinFase':id_fin_fase,
-           'idEpisodio':id_episodio,
-           'idInicioEpisodio':id_inicio_episodio,
-           'idFinEpisodio':id_evento_fin_episodio,
-           'idGrupoTemaInteres':grupo_tOf,
-           'idGrupoVariableLongitudinal':id_longitudinal,
-           'idGrupoCategoria':grupo_cats,
-           'idGrupoOperacion':id_grupo_operacion_null,
-           'valorMin':valor_min,
-           'valorMax':valor_max,
-           'valorNoConocido':valor_no_conocido
-       })
-
-   hechoRegistrarVariable = pd.DataFrame (filas,columns=['idVariable', 'idFechaRegistro','idFase','idInicioFase','idFinFase','idEpisodio',
-                                                    'idInicioEpisodio','idFinEpisodio','idGrupoTemaInteres',
-                                                    'idGrupoVariableLongitudinal',
-                                                    'idGrupoCategoria','idGrupoOperacion','valorMin','valorMax','valorNoConocido'])
-   return hechoRegistrarVariable,puenteCategoria,grupoValorCategoria,puenteTemaInteres,grupoTemaInteres

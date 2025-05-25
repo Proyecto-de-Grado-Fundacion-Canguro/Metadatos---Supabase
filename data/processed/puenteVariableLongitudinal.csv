@@ -1,0 +1,28 @@
+idGrupoVariable,idVariableLongitudinal,descripcion,abcisa
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,5f270d55-c44d-4934-8664-5e1721595b71,ERN_EGBallard,ERN_EGBallard
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,563574f0-f9dc-4763-b4cf-da11b23d901b,PCANG_EGentradaPMC,PCANG_EGentradaPMC
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,58077d29-2ca8-4298-a110-ca999a9679d2,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,87aab9af-8f73-4679-895f-62e992d11dd9,SEG_EdadVisita3mECV260,SEG_EdadVisita3mECV260
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,406af995-741a-4ba1-ba33-89a9f1883b84,SEG_EdadVisita6mECV303,SEG_EdadVisita6mECV303
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,2b071e89-20bd-40a7-a9a6-2e9626524b2a,SEG_EdadVisita9mECV346,SEG_EdadVisita9mECV346
+58fb9eca-9306-4959-95d7-dc2a7a90a9a3,b9609cfa-3058-4b42-95c8-3c1e948e693d,SEG_EdadVisita12mECV388,SEG_EdadVisita12mECV388
+e10591e4-ceb6-455a-bdd8-5443bd65b422,07edf62c-7ed8-43d1-8e40-1c882db5d3f3,ERN_EGBallard,ERN_EGBallard
+e10591e4-ceb6-455a-bdd8-5443bd65b422,bca704f8-757c-4d9c-9f81-672c1a988e42,PCANG_EGentradaPMC,PCANG_EGentradaPMC
+e10591e4-ceb6-455a-bdd8-5443bd65b422,7a18d828-c33d-413e-9406-cf865e9ded85,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+e10591e4-ceb6-455a-bdd8-5443bd65b422,8b4acd1c-4b73-49b4-8568-7fb83d99df5d,SEG_EdadVisita3mECV260,SEG_EdadVisita3mECV260
+e10591e4-ceb6-455a-bdd8-5443bd65b422,e8dd571b-d4ef-4574-a78c-6615f44ae3a8,SEG_EdadVisita6mECV303,SEG_EdadVisita6mECV303
+e10591e4-ceb6-455a-bdd8-5443bd65b422,16663e7f-1964-438c-b009-d6f756863710,SEG_EdadVisita9mECV346,SEG_EdadVisita9mECV346
+e10591e4-ceb6-455a-bdd8-5443bd65b422,9192b987-d6c5-4311-9431-f133f0f21873,SEG_EdadVisita12mECV388,SEG_EdadVisita12mECV388
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,e218ac41-f4c3-4c56-b983-ad10fcca13ba,ERN_EGBallard,ERN_EGBallard
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,99227631-821c-4b4f-b952-f3208182b043,PCANG_EGentradaPMC,PCANG_EGentradaPMC
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,59b73ad1-343f-42a5-83ec-15a2d1528a0a,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,b337aed3-da6c-4e73-a307-cc757df35ef0,SEG_EdadVisita3mECV260,SEG_EdadVisita3mECV260
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,a93fc48c-2f60-4c04-94a9-8e2f34d7f6a2,SEG_EdadVisita6mECV303,SEG_EdadVisita6mECV303
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,de40198f-d717-45df-8f39-45a9735da7ce,SEG_EdadVisita9mECV346,SEG_EdadVisita9mECV346
+c922f201-a6ae-4f53-98a9-45096ca8ecf1,c09ee232-694d-4b1f-9c77-c5b456ae0ee2,SEG_EdadVisita12mECV388,SEG_EdadVisita12mECV388
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,b6df447a-d8ab-4a88-bae2-88cb94643c2b,PCANG_EGentradaPMC,PCANG_EGentradaPMC
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,71f9d6fe-6d99-4ae6-bdc2-82f6b8bd9b3a,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,694e8559-5dff-47c9-9e24-8f1fcaba9d4a,SEG_EdadVisita3mECV260,SEG_EdadVisita3mECV260
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,dabb5f6b-c987-4d4c-9a1c-940189c9675e,SEG_EdadVisita6mECV303,SEG_EdadVisita6mECV303
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,e13a8fbf-2a38-43be-8221-8586f29bff8a,SEG_EdadVisita9mECV346,SEG_EdadVisita9mECV346
+2e0d84e6-d5a8-4dc4-85de-f318dafc4dc3,c7ad4ff0-7f8c-4a2c-b32b-65d27e81994e,SEG_EdadVisita12mECV388,SEG_EdadVisita12mECV388

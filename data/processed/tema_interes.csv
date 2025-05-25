@@ -1,0 +1,11 @@
+id,nombre,descripcion
+98f1fa2b-0b09-4361-a4e8-9564c1de4149,CRECIMIENTO,"datos de peso- talla-pc, cada vez que sea posible "
+1c82af61-3e05-46ff-ad2e-68c1ab97a3fd,CONTEXTO SOCIOECONOMICO,Condiciones Familiares
+a421e5d7-9391-4b54-be87-abef05b18e3e,DESARROLLO NEUROMOTOR,Datos de pruebas de neurodesarrollo
+abb1774d-0ce9-452d-9a0e-f5ad12db8839,DESARROLLO CRECIMIENTO,Datos a lo largo del PMC
+55c4a25c-7ef1-4f13-b905-48318acbf380,DESARROLLO SENSORIAL,Datos de Desarrollo Sensorial
+b69941ab-65b2-4b9c-8e53-2b7d7b0506e8,NUTRICION,Datos de Nutrición
+b4630025-4fd3-4129-a03b-fa4f8b4da0cb,APEGO(?),
+6b62c5f6-c575-49c3-800a-ff9e85e71ac3,HOSPITALIZACIONES,Datos de todas las hospitalizaciones (desde URN)
+35dc66d7-0d37-4d4d-a0e2-1b3e8939d250,SEGUIMIENTO-VACUNAS-TAMIZ-MORT,"Seguimiento en vacunas, tamizados, "
+f2e87b1c-5991-48a7-b9d4-6cf1c06c512d,POSICIÓN CANGURO,Datos de posición Canguro

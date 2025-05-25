@@ -1,0 +1,11 @@
+id,nombre
+bb1579b2-e696-40d2-bd9a-100468bd63d2,VL_Weight
+a43a7185-3d43-4f8a-843d-979837deabb4,VL_Height
+f122fb9d-1522-4c04-a2ce-9160950ae853,VL_HeadCircunference
+69d30cca-37ed-4dfb-a3e0-dd550f3d34db,VL_WeightForHeight
+39c574f2-569a-450a-9075-c80ae27b8355,VL_zscoreWeight
+5ace4618-64e4-403c-b856-b43824df02c4,VL_zscoreHeight
+218e56d8-cc8e-4247-a42c-f3e666e2eb64,VL_zscoreHeadCircunf
+0b34f044-916f-42c4-a15a-713af567a03b,VL_zscoreWeightForHeight
+18a0b8bc-019c-4ce7-aadb-18c02ef57cfc,VL_Nutrition
+7bd3db87-aa56-4720-9f99-b5437b498159,VL-SpeedZscoreWeight

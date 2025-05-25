@@ -1,0 +1,317 @@
+id,codificacion,descripcion
+b32f5f81-6d34-41e9-baa3-25ffe6817d35,2,SegPMC hasta 12mEC
+d85db4d5-a9aa-427f-be72-16808db4da80,9,BIEN
+60422c5a-578f-4081-8659-45c4b3b118cd,2,URN
+19097908-2edd-4cd1-a818-2721091a0a3f,2,Retraso LEVE
+431574a5-2015-440a-b4f8-15274f3af917,2,4 A 9 ECOS
+76db05ee-f283-4e53-a4eb-0fa2014ee7ea,0,NO EVALUADO
+a9f1f2e7-f919-4bd3-9c64-4e488d125168,2,No ROP
+484537a1-8500-455c-a150-f1f7300b06ff,2,CONDUCIDA
+e9d96be4-e375-4c01-a8a8-ebde4a3d175a,3,Distonía
+407133c5-9782-418e-b3db-f4ea6414aecb,1,Displasia Broncopulmonar
+1c1f68fe-9728-4126-a567-4950741011f4,2,AL MENOS 12 H
+12675c6c-13cb-4316-adfd-947f0adb6677,2,Ventilación Mixta
+8cac279e-fb00-4ac1-bc21-556619e0979f,6,A+
+29b5a4dc-12e8-4b9f-b02a-4edf94b14a3e,5,6mEC-9mEC
+f72e5168-da2a-4b65-9fe1-5ea1c7a2d33b,7,+ 6m a 9m
+f72d2e13-da8d-435a-ba1a-3a5a27a84881,6,ROP grado 4 (CIEGO)
+ec830c16-3700-490f-802a-f5f97f78ef1e,0,No operados
+54611c85-58a5-480a-83ff-b1f66480a2ed,3,Perdio o no autorizado por su EPS/ARS
+512fdb1b-3616-4244-9f38-190f5e92506e,2,FEMENINO
+aa16ae16-1e7f-49f5-9f1d-aa5e2189b65e,4,Expulsiva
+2f42555b-7a4b-4e51-8d7d-61c303d695ad,3,"SI, con CIRUGIA"
+6e13a982-e6d3-48b8-8988-b49ca57d47f6,4,+Salida-40semEPC
+4695e00b-e949-4429-8bc2-1e1c51e12dc2,2,Control por ARO MAS  DE 50%
+61d34162-ce59-475c-bfbc-d70355c6a473,3,3er. Trimestre
+0487fdc0-8dee-4515-916b-4759dce08772,5,Cambio de departamento
+a1799101-edf8-41f0-a4cd-4cfa2c54d6c0,0,NO VACUNA
+60cde339-70a4-4bca-895b-06e5f562b18a,6,antiretroviral solo
+ceac27c7-f68c-49cf-bcfb-52b0d9288ca2,3,nan
+a6d75692-a1e2-43ac-941b-c8ba40f9327a,1,CON empleo
+b47aa7a6-23bc-4d47-9cf6-99bb87146fac,1,ASINTOMÁTICA
+de96c130-9866-45e6-8064-5df2c3121ddf,3,ATPEG (Pequeño AT)
+d6bfb195-de50-45d3-8344-8ad8dfe7b571,5,Retraso severo
+6ca3984f-04b0-43dc-b5f9-7a505d763d8b,0,Asistió después de 12 mEC
+2885d99b-4c98-41cd-babc-ee013b51f22c,0,"NADA (por ahora, o no reportado)"
+e7611363-9845-4a3f-bf18-58258a46ff15,2,PTPEG (Pequeño)
+0dd13556-1ab8-4400-8ed9-343c654ac616,5,AB+
+c2053126-c9e7-46e4-86dd-35874893cd7e,1,Sala de Partos
+11a1872c-90c6-45cd-b145-f0a6c3790e7e,0,NO INFECCION
+a10a621b-2fe4-4e64-a377-c96fbe612261,3,ANOXIA LEVE
+4a500e99-e991-4f28-b5c4-b81fff05f74c,4,ROP grado 3
+4882897a-ca86-4183-87e8-70cd1767618f,0,En seg./seg.acabado
+c44bd083-c68b-43af-ac20-b8c51e852ebe,3,ANORMAL
+b55d7f2b-3d98-4952-8a8f-e91279bbaed2,4,hierro solo
+c4b1c66a-39bf-4f48-a1a1-b27d484e2680,2,DOS
+eeab7e71-ee16-4c17-aabb-a82c9ed774a7,4,Ciego 1 ojo
+3685d166-409b-41ae-81cc-6a5c4d44ee20,0,VIVO
+bd1f047d-5a9a-4167-bf26-07010ffcb098,1,Hipertonía
+cd057ee3-7e33-4c59-b071-512dcc6f29f3,5,ROP grado 3+
+d4211a91-b932-44e4-acbb-cd60c77d39a6,4,Estudiante
+061b5256-4e99-48b0-99da-38d0d1351955,1,nan
+61130eaa-aa51-44f5-999a-289c34f15b24,8,O+
+11a3f0dc-2721-4047-9b7e-7a2c4b739ae4,0,NINGUNA
+b24dfeb4-7e73-4ac7-819d-830d08edbe33,2,+ ANTES elegibilidad
+569fe348-2e13-4977-aaf9-a6d2d32dfdb0,3,40semEG-3mEC
+b58ef6be-b39e-4a5f-8ebb-cb1d97b0e02d,6,ALTA
+f74e4034-328a-49d8-bddd-e869c7df7dba,2,5 A 9
+86c9177f-9e1d-468e-86ff-89d46a0ee6b8,3,33 A 34 SemEG
+9dfb3c88-96ec-403a-9eea-73e614274d25,4,O-
+09970e98-9ca8-4e1b-b1ba-7deaaa8047c4,4,Severamente insuficiente ( una comida diaria)
+a9d504fe-3f5d-4066-aca0-cacec60bdbeb,1,VAC COMPLETO
+149e4c15-08fe-4a83-a6d2-a872a1b8280a,2,LIMBO
+42a9cdeb-2d0e-4059-b3d6-be867dab6847,4,3mEC-6mEC
+75231bfa-75c3-48d1-a989-43b1e4de4a1a,1,1 a 3
+dd770e0d-b87c-45fa-8b0b-9b46468da6bc,5,anticoagulante (sin antiHTA o antibio o B+)
+54dee540-d492-4d17-a75a-51ea509209ed,3,Más de 2 horas EN la ciudad
+c9553042-1aa8-4b05-a701-5d74a15e1298,3,INDUCIDA
+5b35daea-d31e-4cb5-b53c-6d13dddc7051,9,NO HAY DATO
+f3e2cc8f-3212-4d42-ba35-5fd21bb78d68,2,1001 a 1200 gr
+421e4451-56b8-4f9b-9d18-ded3fe8c66e1,1,No llegó al PMC
+2ffcac97-e3db-4317-848e-25768e1b6ef3,2,Miope
+15052011-9202-421d-8d8a-453b69c84005,2,SINTOMÁTICA
+fe7a9d80-ab40-4993-be34-9f18f4eb8684,5,RSM Severo/Profundo
+d761e283-354b-4743-b4c3-e8bd28af1a6f,2,APNEA SECUNDARIA
+f3b4d485-63dd-4396-b189-73ef03445500,3,NHD
+577e36ca-9eb6-4fd7-88e0-cde881b62b2b,0,Normal
+70955d0a-ca43-4c38-bc3b-ff1357e95a36,1,de 40sem a 12 meses
+5cb8978c-ed2a-4b35-b934-1cc67b16418b,3,10 O MAS
+acef6c3e-6a14-43c9-9a53-48d4cc4d67bc,1,No autorizado/ no EPS/ARS
+f66eefb4-8203-4dd6-8c55-9f19083e5f4e,1,Anormal
+b979f327-7069-4db7-8f9f-30ca23ec1b30,2,HTP
+cf32c691-a5f8-44dd-bb31-d44d45b51acc,1,ESPONTÁNEA
+370ef367-fd98-4727-8a21-d7e55c909d82,4,Vehículo
+aab8ef8e-0b99-43a5-ab1f-0c062ed05c01,3,RETRASO LEVE
+9fd5fdc9-7674-481d-9854-3e454e1e04ba,8,+ 9m a 12m
+3fddd703-6303-46c0-ae13-ff8cb0e98f73,3,Cesárea Electiva
+d4a03352-8836-4a80-a7c3-07e02bb41a0e,3,MULTIFACTORIAL
+32407346-c67c-4abe-8d3b-72ee297c78b8,5,CIEGO 2 ojos
+1304e025-2794-4c91-af46-228f2bc9ec8f,2,EDAD FERTIL NORMAL
+040b513a-4b9d-4e00-a951-7d0f72de5e38,0,No Hecho
+855d70ef-1a50-4861-88ad-1d7e099641b7,3,+ELEGIBLE Salida
+1d3827a5-425e-469a-9537-6cf048729768,-1,NO VINO Y EN SEGUIMIENTO
+518cfd96-5623-4d3c-aeb3-6ac85e8ce566,2,Urbana
+56957e62-d0da-4dac-84e7-81f5e1166ef8,2,apenas suficiente ( 3 comidas)
+1d888b78-ff55-407a-b784-1954efc71ecc,6,tecnica incompleta
+d59f2b45-8ee2-4d1f-a8d0-e02c5e58e94e,1,SegPMC gasta 40 semEG
+b49754ba-99ae-4718-983d-71529264af50,0,NORMAL HASTA 12M EC
+e6cdfa1a-159e-46e3-a4df-796e22212573,3,SegAltoRiesgoPMC hasta 12mEC
+168ea0e3-d7e3-4079-add8-3dcc67ff233b,1,Control por ARO MENOS DE 50%
+e856a465-c128-4565-bd76-c6d609333547,2,NO
+e0b99ba9-924a-42dc-9b60-0ed1d4ebfe2d,2,Cesárea
+09ae2a6d-639b-4dc5-84ee-d30fbb63d15f,2,SOLA CON APOYO
+5f0393eb-b36c-4bf6-8edb-ae78819bb5cc,3,OTROS PBS DE TONO
+afd91d07-5758-407d-82a7-6e1adc14fefd,3,segundaria completa o no
+ac06f24c-edcd-490d-b78c-1914ed7621e1,3,NO hecho
+45aeb2d2-2ab5-4378-8c70-89087b63dae0,6,9mEC-12mEC
+93d503e7-dbe3-443c-9c64-258b28132a85,14,Astigmatismo Hipermetrópico
+2f0120f1-b50c-424d-afc6-202be50de6c4,4,Retraso moderado
+8c96be0e-29a3-4ce9-bee9-192078f8266a,1,HASTA 30 SemEG
+0be6e6e0-973c-4770-829d-2a445e0798ae,3,B-
+fe453bd5-eee7-466a-a83d-e70263727e33,2,REGULAR
+4cb989be-180d-45ab-8248-943bbaae42cc,2,Hipotonía
+9a27ac31-0db7-4d56-9af5-c253adcd0ff5,1,HIPOTONIA
+8b414977-83c5-4573-bac0-d2fa93ab118b,4,Hipermetropía
+84d7be8e-21b8-4784-a0e3-3d99b6c03a69,1,APNEA PRIMARIA
+f0b06056-355a-4638-b443-73584244bce1,9,SIN DIAGNÓSTICO
+d6f53bad-494b-4bb7-9656-b1c163ec817c,2,de 1 a 2 SM percápita mensual
+f0ab5e14-785f-41ae-b2d6-1abc1633eafc,4,OTROS PROB. NEUROLOGICOS
+b0dc4238-4b43-4ba9-bf6e-79dad7ce3ce1,10,MUY BIEN
+fb4e6a89-7b4b-4f78-ba43-4c5e6d8f764b,1,BUENA
+01ed80f1-1ca3-4680-8efe-2e32fe394fd9,1,SI Hosp
+06faef32-8c1f-45f6-9e69-88f20ed26fc3,3,"SI, grado en ojo izquierdo"
+90dcf04d-9d24-47bc-a9f4-be81dda5ab12,3,INFECCION MOSOCOMIAL
+466078b8-e20a-4d17-a978-cbf7d386365f,1,MASCULINO
+fcdbc8e6-0f5b-41b7-b071-0b4295f94f76,0,NORMAL AUDICION
+aac08d2a-e9f5-4f21-8ed1-6e38c1e15210,1,Ventilación sola
+f426e911-55b0-416e-86d1-3a95e30aef97,1,UNO
+0d70a792-86a6-4db3-8525-1d06712a299c,3,AMBIGÜO
+a937cd0f-6fa9-4803-bd39-c43b5db6d658,1,VIVO
+a3d6f738-922b-4fc5-8afb-4eab6a83f561,4,NO hecho
+f5f25461-646b-4a18-9bbb-ff685ee02623,3,Subsidiado
+dd294793-ec6f-4e69-8708-af67c4ec13d5,10,?
+afa0f01c-a6cf-4bae-aceb-b7770ee3aa44,4,"SI, grado en ambos ojos"
+41340c4b-1e90-4661-953b-1fc2c440a28c,1,Ciegos
+a495355d-1d90-48de-a9d0-517ceeb47fa6,2,LM+LA
+8fe143ce-3a85-48c1-ac82-c6b3f71f8afc,4,Deterioro Amos oidos
+f1004f85-5123-4dd2-a7e9-533d66fc5e29,0,Sobrestimulado
+265cecac-cf9d-40e4-92f1-a4d18153afa6,2,"SI, grado en ojo derecho"
+a0862f14-6627-4b2d-ba46-264495b66dac,3,MAS DE 35
+e4a585b7-988e-4620-adad-3e40e37d55f9,1,Med.Obstetra
+46a6a86c-2cf4-4d61-8efe-dfc35edb3ad7,7,?
+3a6692ab-a0c8-40ff-b229-bd19ac7d372f,4,segundaria incompleta
+3d2c0e31-fe6d-4cff-a86e-d6a423d09dd7,2,primaria incompleta
+81c1f3df-d204-4b47-9b58-d57c93d80e3f,5,tecnica completa o no
+9cdfb81e-7e04-49d6-99e4-89ca6307c8c8,1,Cefálica
+742ed81e-f148-4d48-8f93-bd6eb0a55d1d,5,+40sem EPC - 3meses
+1a258a92-71dd-4569-989c-870debfaf4b7,2,Deterioro Oido Derecho
+127ab457-c87c-408b-b6c2-68be0ce940e6,3,Aloj.Conjunto
+bd8efb09-986f-4f3b-9ce3-eafadbfed71b,3,Deterioro Oido Izquierdo
+3f5bede5-6726-4fee-bb73-e895f6ee4df3,2,NO ROP
+e3abdc57-5d0a-45a9-87ba-7ea59bc4f7e4,1,ANOXIA SEVERA
+b1f420fe-362b-4dd0-a5de-40a58e68f191,0,EMERGENCIA0
+1e1302d0-577a-4387-9de3-aee0bb87341a,2,ROP grado 2
+e7093fa0-8079-41b5-8a66-190393eb9558,3,AltoRiesgo (más de 2100 gr y 37 semEG o más)
+75ec95de-4e7e-4c29-86c2-0a9799083527,3,uteroinhibitor (sin antiHAT o antibio)
+723f44d1-02c5-4a34-b4cb-a6793989112b,1,MUERTO (Parto-40sEG)
+497d86e4-ecac-49a4-a89c-be5efa11419c,3,DBP+HTP
+2d63f2a6-cf9b-42f9-9de8-f810f38f70b6,1,PATOLÓGICO
+946c4d77-a1ff-4eb9-89b0-d2b8c9d0e8c4,2,TRANSITORIO
+bdfa2b98-a131-40a9-abd2-67cdbf7a4084,1,Normal
+7e0c23ff-efa6-434d-b5bc-5b527bc57810,2,de 40sem a 12 meses
+7fa9e68e-1801-4b53-ac65-c5add861335e,4,1501 a 1800 gr
+a5b2a493-6120-4426-8836-d4dd58760dbe,2,Positivo
+27d79faa-2666-4f6d-8304-da2cb3f87461,3,Partera Profesional
+0af9b84e-ce73-4cc2-8bcd-b3ea05a76957,3,insuficiente ( 2 comidas diarias)
+c216e14e-a92c-47ef-b5d5-e58ce890e5fa,2,Hasta 12m EC
+9a290c15-f39a-4564-97af-e6a3bef121ce,5,NO HUBO
+9fdb6474-a0c0-406f-b624-8d71bd72f62f,1,Hasta 40 semEG
+b7120b96-7d5b-4bdc-a310-8e546bc477bd,4,RECUPERACION
+5eddd089-4712-49ea-9500-ba4e404d322e,2,HIPERTONIA
+bc57bc85-5779-44d4-8364-370008ffd825,6,RECUPERACION
+e5288476-3e41-4f46-b245-d1bffcb3e4fc,6,más de 2000 gr
+40645aef-af9d-4095-aa55-5109733f20ea,1,Operados (laser/crioterapia)
+356a7d93-0df8-4a1d-bb8c-dfb6c0ab8303,2,Problemas económicos
+e8ced5ec-a970-4661-97df-0c585732bc15,3,MALA
+8433662c-a898-40e6-b0b1-72103e8d3bb5,2,2do. trimestre
+27820ebc-a4ab-4d5b-be3c-aeb8a03149a9,4,ATBPN
+aef2e5d0-eb28-46bc-ad7a-2d2dad20898d,2,MIOPE
+7c2dd0a1-0b35-49a6-9359-b05c0e4af433,8,Vive lejos
+a3bb0892-7d62-4e4d-8200-f84d2f23ae92,1,Buena ( 3 comidas y 2 refrigerios)
+3f6650c7-ce93-44b2-a73f-8a2f5fc49276,4,LM+Fortificador
+a1ffc41c-c549-4ed2-afc3-0ff1eb4c03dc,4,Fallece
+931345ba-dc23-4846-81be-3b2f108b235d,2,Med.General
+86f901ec-1362-4878-85eb-ade854bda766,2,4 a 9
+5fbd7488-c6c6-4258-92e5-14463db1ea46,1,"SI, regresa sola"
+9a1d0bc4-d07d-4903-b1ca-8b72fab6fdec,3,CPAP  sola
+14e8e044-fdd1-4e0a-ae37-a1b8273c1b5f,0,NO
+199029d9-57ad-46e8-87bc-03b311337514,5,37 o MAS SemEG
+3fa87e13-e0ed-4882-ab41-6320f9a5b928,2,Positivo Tratado
+3d5d0eb3-9d57-4e82-861e-3d7bc7cf260f,1,UCI
+5051535c-3e4b-4e56-9a77-90f6c83113ed,1,SI
+6c75180d-4c5c-443e-b233-3038709afc1b,3,TRES CICLOS
+9bddd498-6bad-449b-8c0e-e7c2607e0dbb,1,LME
+aa7440d1-a334-47c6-a61f-2bcd755b9257,0,NO ARMÓNICO
+7988d94e-9cf8-431e-bc78-e0211e575a10,1,VAC SIN MMR
+0d25ec3e-0f3e-49ef-bf6f-cdb641ad69e7,3,Estudiante
+3fd79a95-a2f2-4c77-8dab-515a8e9a2b16,9,NO SE SABE
+65958e56-2976-4f15-8019-c7936c1bc694,2,EMERGENCIA2
+ceff3e46-ab22-4cdd-aad5-cdf45b71b9bc,7,universitaria completa o no
+ac5214b3-0291-4d4d-8422-5a07134e377e,0,Prepagada
+ddf208c4-2131-4018-a08f-77fdeef03ef6,2,31 1 32 SemEG
+9b3c0f8e-af40-4eb3-afa0-e5fbf31c61f5,4,Fallecida
+894e8388-6e4a-4692-ba83-41d455f4f4f5,2,ANORMAL UNO O DOS LADOS
+e80ed658-0778-4de1-8dfa-c38453c9811c,3,Casa
+c699e5eb-6ebf-48f0-abef-cb7a9a051278,1,SI HIC
+69eac012-dc6c-41bd-9a4e-015496e0ed4f,15,Astigmatismo Miópico
+413a344a-67af-46f7-b80a-1bd7497b8778,5,RECUPERACION
+648e515c-8a5b-46a4-b4b7-e5a4f020a480,1,1er trimestre
+04a001f5-c6ed-4719-befe-ec6f15da9a01,3,No se sabe
+a86acbab-cf35-4d7f-981f-ddd1dcf8c3cf,1,AB-
+50173dd5-b6e1-4dd4-8e0d-ee873e909b58,3,Ama de Casa
+a21c21f1-ef1a-4086-a79d-c3baa1f1bd1f,3,APNEA-NO SE SABE
+e724202e-cb02-4e22-b342-a1904b351a0a,4,NO ANOXIA
+c1b56966-608f-4fae-9973-54635c64040a,1,NORMAL
+f5ac1adb-85d9-4acc-b006-372b84006017,4,nan
+2972a3e0-25ab-49c2-943f-659abe6e7fbb,1,EMERGENCIA1
+73fa3517-054b-4893-8c42-d7ffa4b724a5,-1,deserto antes de 40 semanas
+c378680d-06ac-4a80-a9cf-35de011669c4,1,MUERTO (40sEG-12mEC)
+63fd8382-5617-4879-b5a6-1b3fd70848bc,1,PRIMARIA
+153e097e-5722-43b1-9d42-b27c55f55a0a,0,NORMAL
+bef0f316-09fb-4b06-94d1-b8a90a8cf03b,3,HIPOTONIA
+91e9b79d-fe31-4ba0-87b8-2bb3b3c0cf4d,2,SECUNDARIA
+5c6161b7-66fc-48e3-bb45-d62af2116c3e,3,LM+LA
+a23d1268-7f6d-46f4-b507-da082a917feb,1,Rural
+6c975de9-4049-4544-bd42-b5aceb4b90f6,0,NO VAC COMPLETO
+4b459ae2-fe9c-4dcc-b667-88bd3e71997e,2,no deserto por ahora
+af5fd37d-fcba-41da-8787-911d1bcb5448,8,universitaria incompleta
+7f55cc16-ee27-4aaf-9447-6aa4afcb3ea7,6,Cambio de residencia
+c0c4ce85-1c23-45ba-bc55-1ef556233858,2,NO Hosp
+99d5b5f0-91c5-4ccd-8703-451b5d0a3990,0,NO control prenatal
+8d183d80-18bd-414f-93d3-7a8ae3111082,1,ARMÓNICO
+0e7190b4-f36b-4cbe-96f2-310b9f5bf7d8,2,Contributivo
+3d5eadc0-f32c-4a7a-9313-2f62307c39a0,3,Recuperándose
+4b4211ea-2fa7-41dd-a60e-2bfac3d1caf6,1,MENOS DE 12 H
+969c6c00-9fd9-4cf7-a86e-7f287d170be4,2,Centro de Atención primaria
+f381be2a-d052-4a38-bf60-19c2e26deacb,4,Hipermetriopía
+f8b19883-5cac-4307-8e9d-08d968beba3c,3,Retraso MODERADO
+c43e03e0-0e20-4115-bb60-06dabd45e3cd,0,NO VIO EL ARO
+59531692-0007-4b87-bc2f-1b7e37cfa5c7,7,nan
+0917cc4d-6ec1-493e-951e-0f9c1071cf41,7,B+
+b9738f86-7cc6-4ad0-90bc-fc11605568ce,4,CIEGO 1 ojo
+9cc05e19-9b6f-4ac1-8c41-01ffdfa2860b,1,ROP grado 1
+3b05204a-2e4b-48e1-932f-a9a34b9f41e1,3,1201 a 1500 gr
+dad746b4-5009-4de7-bad1-8d87b28f6bce,4,RSM moderado
+7fa750c2-e513-4e73-824e-d26f0997d4e7,0,Ninguno
+6f21ba70-405c-4328-9d97-0efe19737ebd,5,Otro
+c921f148-b6d6-4b1a-a008-63ac724bbd04,7,OTROS diagnósticos
+a1f8d5ae-14e8-4ec6-a92b-5c4e52c12e35,6,Ciego 1 o 2 Ojos
+aef80940-ace3-4b81-ae11-6bc3dc9c360a,-2,no hay datos fecha
+60438513-6906-4538-8cb9-de0b0fb63467,7,Otros Diagnósticos
+5eecd654-048b-460c-9c32-b9783b66fb54,4,Partera Tradicional
+725d2a2e-08ef-45c7-bf56-08d4e821e0e0,1,hasta 1 SM percápita Mensual
+93842dab-cb53-4839-8b19-d2b9973a147d,2,LA
+e8981b9b-cd86-4c19-b6d1-7e5d8d0ce2bd,1,hasta 1000 gr
+f52f22f3-7d1d-4ee5-bfdc-54a03091c00c,2,A-
+427a4c4f-e692-4775-bafa-d1a5823b42ea,8,BIEN
+f3df6070-7ea4-41d9-99ae-bb97f8da2b00,3,"SI, con tratamiento (Cirugía)"
+875499c4-6688-44c5-91fb-a7d2d7290ec3,4,más de 3 SM percápita mensual
+85ab6ae5-8d37-43ee-a313-b701be0a8bf3,1,PTAEG (Adecuado)
+a6bbc91d-bd15-4558-b6a4-d916f678dd8b,1,"SI, regrresa sola"
+4156bb1c-f87b-40a2-bc6a-466288f2b5a4,1,Vaginal
+74285a74-3790-4f43-89d7-83f6317ac868,3,Astigmatismo
+1e1970d8-f64d-4db0-80a2-705ddd8d00f2,2,Anormal
+9ddf8cef-8c18-4442-a33b-17ea0c0f78be,4,Sala de Parto
+32445d5e-19cf-4a28-b627-a6d717dc3ad8,3,LAE
+e0f12a3f-22ad-4591-a6d2-cf106dd8639d,6,+ 3 m a 6 m
+d4bb7a96-89c0-49cd-916e-245b69f5977d,2,antibioticos (NO antihta)
+2766f1bd-524e-45ba-bc0d-33970391c2ff,2,FISIOLÓGICO
+83d4f7dc-1f9f-4d8f-bc52-7f7ecfa7d12b,3,Sin Diagnóstico
+5e6043ff-cb59-4e68-992e-0759d3c132c4,0,NINGUNO
+2548d426-f886-430a-a309-f7ae213d416b,2,UCI
+4ae8aeb7-bf8e-4508-a088-a1ca5553362b,3,Transversa
+b1526350-fe47-4e87-afdf-4a6abbb9f0ec,1,"NO NORMAL, AL MENOS UNA VEZ"
+d1aa8d9a-942c-4154-9b8f-618c3fa422b6,3,24 HORAS
+b1248b81-fee6-4618-9cdf-b8d42307ea58,1,antihta
+c924478b-8421-41f5-9e08-0af58d685b7d,1,ADOLESCENTE
+80c33723-22c7-44a1-b0d0-0c95f44cc93b,3,10 o más
+da8adaca-3b7d-49b3-be87-df56ebba30cd,0,No Vinieron Y en seguimiento
+befcccf9-6b69-42e3-95db-d7922dbd44ef,2,ANOXIA MODERADA
+3b3700a6-d5c8-4356-a357-7104fa6c78a7,0,NO APNEA REP
+7e0e7569-e2b9-4121-9da3-392a29dd290a,2,nan
+375219f8-71e4-4379-a6b0-d36075434bc3,3,RSM leve
+816194fa-275d-4cdf-bed6-54ec4a850ecc,2,SIN empleo
+3e04edf8-92c4-4080-a044-f0fd81c1e6e2,4,35 A 36 SemEG
+500bf4c4-3ef3-4ee0-800b-fd363f520a28,3,Positivo NO tratado
+a132955b-62de-43dd-8e74-a66983bf6ac2,1,1 A 4
+a7e975a8-87a0-4602-a61a-36e1f5727693,1,SOLA SIN APOYO
+6474522c-801d-462c-9afd-1163c0e5d654,2,Podálica
+f994f58b-db51-4b0f-bbdc-5bd2adf57deb,5,Desaparecida
+76981ee5-999e-4b68-84e6-25b7278be4fd,7,Cambió/Perdió su EPS/ERS
+15dc1c14-1c65-4864-8058-a4e6f3f071a6,5,1801 a 2000 gr
+dddfdd9a-1285-4e05-89ca-365c62049b5d,1,MUERTO
+dae02674-569c-4801-b791-12b41dd1dbf3,0,Normales
+8db99023-7666-44e1-afc2-c28b8da849a0,1,Hasta 1 hora de transp
+85e81a57-4fba-4088-9ef5-81e75b01d9d7,1,hasta 40 semanas
+ded32ebc-0f11-47db-9cdb-56998168411a,2,entre 1 y 2 horas  de transp
+4c459057-2c42-48c8-a998-94d8c9993b50,4,Vive FUERA de la Ciudad
+08795e62-3352-42a1-8389-7efa12dc7df2,3,10 O MAS ECOS
+638d6181-0ce8-4fbd-b904-b366a0e92b21,0,No vinieron-EnSeguimiento
+76e4dea1-eb47-4ff3-a684-de23e9f2158e,4,Retraso SEVERO
+53125351-b57c-4a8e-9653-99256da5a475,3,ROP grado2+
+4ab4a7dd-5bce-464d-b712-97a0315e251a,3,SUPERIOR
+9e8de30e-229e-456d-aa05-9f4d8877e26f,4,Consejo médico tratante
+22063c4b-2359-400a-892d-4d7ec26ca64c,3,de 2 a 3 SM percápita mensual
+07ef817d-60ae-4bd9-a5cd-46429d43d343,3,PAREJA ESTABLE
+5193c76e-b4c3-4daa-9827-61020747d32b,1,Negativo
+9101f02f-7a8d-412d-aea8-ef5e94805e23,1,primaria completa o no
+0eca88ec-a902-4d43-ac11-e3ae8581964c,4,NORMAL
+c3954911-2816-4c45-ac50-3929b646bcc5,0,No soporte ventilatorio
+3ce96213-c1f9-4193-80b1-0e23ee4059c2,0,NO HIC
+f90cd9d2-462a-4507-8742-4dd9b2b38ea6,1,No autorizado EPS/ARS
+eb5365f3-1210-4aad-a45d-c211ec4dd952,1,1 A 3 ECOS
+dc615cfa-b49d-4694-987a-4a8f916487c3,2,Limbo
+9ec7b6ed-7859-45c7-aee7-62ca28fe6e4a,2,SEPSIS NEONATAL (CONF./SOSP.0
+c95f4436-9a86-4110-b456-01f47c172bed,5,nan
+fa38a834-234f-45c8-8a2d-7b27ce13d0f7,2,Salida-40semEG
+d2f99972-599d-4521-a04c-7d806275ba18,0,NO TUVO
