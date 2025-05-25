@@ -1,20 +1,25 @@
-from supabase import create_client
-import pandas as pd
-from config import SUPABASE_URL, SUPABASE_KEY
+import sys
+import os
+from datetime import datetime
 from postgrest import APIError
+from supabase import create_client
+import numpy as np
+import pandas as pd
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from supabase import create_client
+from src.config import SUPABASE_URL, SUPABASE_KEY
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
+#---------------Cargar dataframes a Supabase------------
 def cargar_data(df, nombre_tabla, cols_conflicto):
-    import numpy as np
-    import pandas as pd
-    import datetime
+    
 
-    # Reemplazar infinitos y NaN por None
     df = df.replace([np.inf, -np.inf], None)
     df = df.where(pd.notnull(df), None)
 
-    # Convertir datetime, Timestamp y NaT a string ISO 8601
     def safe_convert(value):
         if isinstance(value, (pd.Timestamp, datetime.datetime, datetime.date)):
             return value.strftime('%Y-%m-%d')
@@ -22,7 +27,6 @@ def cargar_data(df, nombre_tabla, cols_conflicto):
             return None
         return value
 
-    # Convertir todos los valores del DataFrame
     records = df.applymap(safe_convert).to_dict(orient="records")
 
     try:
@@ -38,4 +42,5 @@ def cargar_data(df, nombre_tabla, cols_conflicto):
         print("Error de Supabase:")
         print(e)
         print(getattr(e, 'args', None))
+
 
