@@ -10,6 +10,8 @@ from src.GUI.forms.evento_forms import formulario_crear_evento, formulario_edita
 from src.GUI.forms.diccionario_forms import formulario_diccionario
 from src.GUI.forms.operacion_forms import formulario_operacion
 from src.GUI.forms.fase_forms import formulario_editar_fase,formulario_crear_fase
+from src.GUI.forms.episodio_forms import formulario_crear_episodio, formulario_editar_episodio
+from src.GUI.forms.vls_form import abrir_formulario_puente_variable
 
 # Tema y estilo 
 ctk.set_appearance_mode("dark")
@@ -25,7 +27,7 @@ tabs = ctk.CTkTabview(app)
 tabs.pack(padx=20, pady=20, fill="both", expand=True)
 
 # Crear pestañas
-for nombre in ["Diccionario", "Variable", "Episodio", "Fase", "Evento"]:
+for nombre in ["Diccionario", "Variable", "Episodio", "Fase", "Evento", "Variable Longitudinal"]:
     tabs.add(nombre)
 
 def agregar_botones(tab_name, acciones):
@@ -50,20 +52,24 @@ acciones_diccionario = [
 acciones_variable = [
     ("Añadir Variable", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo")),
     ("Añadir Historia a Variable", lambda: messagebox.showinfo("En desarrollo", "Historia a Variable en desarrollo")),
-    ("Añadir Operación a Variable", lambda: formulario_operacion(app)),
-    ("Añadir Variable Longitudinal", lambda: messagebox.showinfo("En desarrollo", "Variable Longitudinal en desarrollo"))
+    ("Añadir Operación a Variable", lambda: formulario_operacion(app))
 ]
 acciones_episodio = [
-    ("Añadir Episodio", lambda: messagebox.showinfo("En desarrollo", "Añadir Episodio en desarrollo")),
-    ("Editar Episodio", lambda: messagebox.showinfo("En desarrollo", "Editar Episodio en desarrollo"))
+    ("Añadir Episodio", lambda: formulario_crear_episodio(app)),
+    ("Editar Episodio", lambda: formulario_editar_episodio(app))
 ]
 acciones_fase = [
     ("Añadir Fase", lambda: formulario_crear_fase(app)),
     ("Editar Fase", lambda: formulario_editar_fase(app))
 ]
 acciones_evento = [
-    ("Añadir Evento", formulario_crear_evento),
-    ("Editar Evento", formulario_editar_evento)
+    ("Añadir Evento", lambda: formulario_crear_evento),
+    ("Editar Evento", lambda: formulario_editar_evento)
+]
+
+acciones_vls=[
+    ("Añadir Variable a Grupo Longitudinal",lambda: abrir_formulario_puente_variable()),
+    ("Añadir Grupo Longitudinal", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo"))
 ]
 
 agregar_botones("Diccionario", acciones_diccionario)
@@ -71,6 +77,7 @@ agregar_botones("Variable", acciones_variable)
 agregar_botones("Episodio", acciones_episodio)
 agregar_botones("Fase", acciones_fase)
 agregar_botones("Evento", acciones_evento)
+agregar_botones("Variable Longitudinal", acciones_vls)
 
 # Ejecutar GUI
 app.mainloop()

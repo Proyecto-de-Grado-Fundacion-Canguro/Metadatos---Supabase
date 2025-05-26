@@ -1,10 +1,10 @@
 id,nombre_analisis,nombre_bd,descripcion,ultimo,fecha_inicio,fecha_fin,activo,num_fase
-405eeb8a-dc4c-496d-b68e-01c5763706ec,CARACTERIZACIÓN DEL SUJETO,caracterizacion,"variables de identificaciOn, el identificador,sede,…",False,2025-01-01,9999-12-31 00:00:00,True,0
-042813f3-b99f-435e-a7fd-9cfe29e11e34,ENTORNO FAMILIAR,entorno,panorama de la situación socio-económica de la familia),False,2025-01-01,9999-12-31 00:00:00,True,1
-a62d380e-a1f8-4630-bc2e-4e84726f9ee4,EMBARAZO HASTA EL PARTO,embarazo y pre-parto,variables de seguimento del embarazo y datos hasta el parto (posibles hospitalizaciones de la madre),False,2025-01-01,9999-12-31 00:00:00,True,2
-fe923526-9e48-42ab-a278-d70820379b2b,PARTO a 40semEG,nacimiento a 40 semEG,Datos del bebé balance en el parto (posibles complicaciones) y hasta antes de las 40 semanas EG.,False,2025-01-01,9999-12-31 00:00:00,True,3
-a7f5f301-eb12-4bc8-86c4-94be2a619d12,de la 40semEG a los 3mEC,40 semEG a 3mEC,Datos del balance a semana40EG hasta los 3 meses de Edad corregida. Datos del bebé a los 40 semanasEG y hasta antes de los 3 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,4
-25c8523e-0bec-48a1-bd94-b97c568ea3f8,desde los 3 mEC a los 6 mEC,3mEC a 6mEC,Datos del balance a los 3 mesesEC y hasta antes de los 6 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,5
-b9cb99d4-bb34-4165-8067-76e3d243719a,desde los 6 mEC a los 9 mEC,6mEC a 9mEC,Datos del balance a los 6 mesesEC y hasta antes de los 9 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,6
-913a7a99-dda0-42cb-a54c-3ae0e7e53453,desde los 9 mEC a los 12 mEC,9mEC a 12mEC,Datos del balance a los 9 mesesEC y hasta antes de los 12 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,7
-8b69c32b-05c2-4487-9bd8-b39e252738f2,a los 12mEC,12mEC-,datos del balance de 12mEC,True,2025-01-01,9999-12-31 00:00:00,True,8
+fad7d0dd-a97f-4850-a4ab-2f3dad2d0382,CARACTERIZACIÓN DEL SUJETO,caracterizacion,"variables de identificaciOn, el identificador,sede,…",False,2025-01-01,9999-12-31 00:00:00,True,0
+b6ac7f86-46d6-48cc-b8e7-34a9c0434a5f,ENTORNO FAMILIAR,entorno,panorama de la situación socio-económica de la familia),False,2025-01-01,9999-12-31 00:00:00,True,1
+fb0854ef-d942-4985-897a-7039d2e6c7a6,EMBARAZO HASTA EL PARTO,embarazo y pre-parto,variables de seguimento del embarazo y datos hasta el parto (posibles hospitalizaciones de la madre),False,2025-01-01,9999-12-31 00:00:00,True,2
+2404d8b6-0651-4e39-9c54-6381e4e1cdfc,PARTO a 40semEG,nacimiento a 40 semEG,Datos del bebé balance en el parto (posibles complicaciones) y hasta antes de las 40 semanas EG.,False,2025-01-01,9999-12-31 00:00:00,True,3
+0adf6426-a2b0-483a-865b-81476ca38938,de la 40semEG a los 3mEC,40 semEG a 3mEC,Datos del balance a semana40EG hasta los 3 meses de Edad corregida. Datos del bebé a los 40 semanasEG y hasta antes de los 3 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,4
+b23fc05d-8346-4d6e-bf35-3cedccb4cea6,desde los 3 mEC a los 6 mEC,3mEC a 6mEC,Datos del balance a los 3 mesesEC y hasta antes de los 6 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,5
+3304130b-cef6-476d-9fb9-725faeb10373,desde los 6 mEC a los 9 mEC,6mEC a 9mEC,Datos del balance a los 6 mesesEC y hasta antes de los 9 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,6
+b50dc119-eaf1-41b4-ab27-b7853b61d19d,desde los 9 mEC a los 12 mEC,9mEC a 12mEC,Datos del balance a los 9 mesesEC y hasta antes de los 12 mesesEC,False,2025-01-01,9999-12-31 00:00:00,True,7
+37056717-703a-49b1-bcf2-28b7625128be,a los 12mEC,12mEC-,datos del balance de 12mEC,True,2025-01-01,9999-12-31 00:00:00,True,8

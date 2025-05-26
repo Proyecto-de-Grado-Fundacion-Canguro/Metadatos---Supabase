@@ -277,30 +277,37 @@ def poblar_valorCategoria():
     return valorCategoria
 
 #### Dimensión Puente Variable Longitudinal ---------------------------------------------------------------------------------
-def poblar_puente_y_grupo_variable_longitudinal (df_variable):
+def poblar_puente_y_grupo_variable_longitudinal(df_variable):
     n = len(df_vLongitudinales)
     ids_grupoVLs = [str(uuid.uuid4()) for _ in range(n)]
-    filas=[]
-    filas_grupos=[]
-    for row in range(1,len(df_vLongitudinales)):
+    filas = []
+    filas_grupos = []
+    
+    for row in range(1, len(df_vLongitudinales)):
         grupo_nombre = df_vLongitudinales.iloc[row, 0]  
         filas_grupos.append({
-                        'id': ids_grupoVLs[row],
-                        'nombre': grupo_nombre
-                    })
-        for col in range(1,len(df_vLongitudinales.columns)):
-            nombre_variable=df_vLongitudinales.iloc[row,col]
+            'id': ids_grupoVLs[row],
+            'nombre': grupo_nombre
+        })
+
+        for col in range(1, len(df_vLongitudinales.columns)):
+            nombre_variable = df_vLongitudinales.iloc[row, col]
             var = df_variable[df_variable['nombre_bd'] == nombre_variable]
+
             if not var.empty:
-                id_variable=var.iloc[0]['id']
-                fase=df_vLongitudinales.iloc[1,col]
-                abcise=df_vLongitudinales.iloc[0,col]
+                id_variable = var.iloc[0]['id']
+                fase = df_vLongitudinales.columns[col]  
+                abcisa = df_vLongitudinales.iloc[0, col]  
+                
+                descripcion = f"{grupo_nombre} - {fase}"
+
                 filas.append({
                     'id_grupo_variable': ids_grupoVLs[row],
-                    'id_variable_longitudinal':id_variable,
-                    'descripcion':str(fase),
-                    'abcisa':abcise
+                    'id_variable_longitudinal': id_variable,
+                    'descripcion': descripcion,
+                    'abcisa': abcisa
                 })
+
                 
     puenteVariableLongitudinal = pd.DataFrame(filas,columns=['id_grupo_variable','id_variable_longitudinal','descripcion','abcisa'])
     grupoVariableLongitudinal = pd.DataFrame(filas_grupos, columns=['id','nombre'])
