@@ -9,6 +9,7 @@ import customtkinter as ctk
 from src.GUI.forms.evento_forms import formulario_crear_evento, formulario_editar_evento
 from src.GUI.forms.diccionario_forms import formulario_diccionario
 from src.GUI.forms.operacion_forms import formulario_operacion
+from src.GUI.forms.fase_forms import formulario_editar_fase,formulario_crear_fase
 
 # Tema y estilo 
 ctk.set_appearance_mode("dark")
@@ -57,8 +58,8 @@ acciones_episodio = [
     ("Editar Episodio", lambda: messagebox.showinfo("En desarrollo", "Editar Episodio en desarrollo"))
 ]
 acciones_fase = [
-    ("Añadir Fase", lambda: messagebox.showinfo("En desarrollo", "Añadir Fase en desarrollo")),
-    ("Editar Fase", lambda: messagebox.showinfo("En desarrollo", "Editar Fase en desarrollo"))
+    ("Añadir Fase", lambda: formulario_crear_fase(app)),
+    ("Editar Fase", lambda: formulario_editar_fase(app))
 ]
 acciones_evento = [
     ("Añadir Evento", formulario_crear_evento),
