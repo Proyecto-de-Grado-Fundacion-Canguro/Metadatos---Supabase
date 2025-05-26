@@ -22,7 +22,7 @@ def buscar_evento_por_nombre(nombre):
     result = supabase.table("evento").select("*").eq("nombre", nombre).eq("activo", True).execute()
     return result.data[0] if result.data else None
 
-def actualizar_evento(nombre_original, nuevo_nombre, nueva_desc, nueva_variable, fecha_fin):
+def actualizar_evento(nombre_original, fecha_fin):
     evento = buscar_evento_por_nombre(nombre_original)
     if not evento:
         return {"ok": False, "msg": "Evento no encontrado."}

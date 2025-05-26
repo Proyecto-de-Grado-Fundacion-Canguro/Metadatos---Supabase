@@ -1,7 +1,7 @@
 id,descripcion,fecha_inicio,fecha_fin,activo,nombre_analisis,nombre_bd,id_evento_inicio,id_evento_fin
-42842f91-24c1-450a-9a99-27a3cfc1b37a,Inicio del KMC en Sala de partos,2025-01-01,9999-12-31 00:00:00,True,MMC-iERN,MMC-inmediato,62bc92b4-11eb-4577-a985-8e6d68481dd2,62bc92b4-11eb-4577-a985-8e6d68481dd2
-ad05949c-cae3-49ac-b5d3-fd4e0afe8eb2,MMC en casa con seguimiento cercano,2025-01-01,9999-12-31 00:00:00,True,MMC-enCASA,MMC-Ambulatorio,abb4b501-9e42-49f8-a75b-29e2c975c0e9,85caae10-c6d8-457c-b034-348dcf83c59e
-2e36ebec-91ca-4424-9efc-d7cbf4a54fde,MMC en la Unidad de RN,2025-01-01,9999-12-31 00:00:00,True,MMC-URN,MMC-en URN,a28d7ecf-16fa-48f6-b1f9-f8c623db7243,d37fb5e9-f3e2-4a73-95d0-4b4956ef20ba
-8cd47c30-dfec-4562-a0e7-fa56919186ca,MMC en Alojamiento Hospitalario/Observacion,2025-01-01,9999-12-31 00:00:00,True,MMC-enHOSP,MMC-AlojaHosp,,
-6ebef2a3-e63f-4175-a363-2cff316d29f1,Hospitalización NO-Neonato,2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización NO-Neonato,6ecef210-bf4d-4ca8-8854-a70452a4fc87,6ecef210-bf4d-4ca8-8854-a70452a4fc87
-bac0b7cd-c8d9-4275-922a-db2f13bbf52e,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Infante con Oxígeno,6dd85228-6d7a-4b17-a268-98f14808eb4f,43a6d64d-b548-4b19-b69d-b7891e9d905f
+5c45643b-a1b5-401a-a698-5a54588279fe,Inicio del KMC en Sala de partos,2025-01-01,9999-12-31 00:00:00,True,MMC-iERN,MMC-inmediato,c98f54bf-266e-4dc3-bf52-a3d8e592aa2b,c98f54bf-266e-4dc3-bf52-a3d8e592aa2b
+f08edbee-257a-407a-a237-ce3821222cdc,MMC en casa con seguimiento cercano,2025-01-01,9999-12-31 00:00:00,True,MMC-enCASA,MMC-Ambulatorio,08b167b5-1798-4200-9519-62ed00823114,7f300272-22ce-4844-9c53-dfeb7073d4e6
+3bf3a164-f49a-47eb-b6e9-204b566ffc37,MMC en la Unidad de RN,2025-01-01,9999-12-31 00:00:00,True,MMC-URN,MMC-en URN,50308b5d-a006-464f-9f63-06e3bf66d6be,7b397522-5835-46a0-87e4-87408c20e2fc
+6664ae8a-501b-4a1b-82f5-da6d26ff11b8,MMC en Alojamiento Hospitalario/Observacion,2025-01-01,9999-12-31 00:00:00,True,MMC-enHOSP,MMC-AlojaHosp,,
+2ab9cb1d-3dde-4d98-9318-ba79d6a7be5f,Hospitalización NO-Neonato,2025-01-01,9999-12-31 00:00:00,True,HD-GEN,Hospitalización NO-Neonato,7c5d6319-89d0-4a83-984f-242a5d10b5ee,7c5d6319-89d0-4a83-984f-242a5d10b5ee
+04332ecc-dafc-4c8f-9288-1099cdb5c24e,datos del bebé durante la condición de suministro de oxígeno (incluyendo de forma ambulatoria),2025-01-01,9999-12-31 00:00:00,True,OX-DEP,Infante con Oxígeno,2f25d9fb-860d-49d2-bca1-60ba44aefba6,ba0b3b9a-f3fe-45dd-8b63-591f309a463e

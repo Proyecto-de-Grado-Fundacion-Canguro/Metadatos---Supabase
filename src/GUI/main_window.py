@@ -8,8 +8,9 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".
 import customtkinter as ctk
 from src.GUI.forms.evento_forms import formulario_crear_evento, formulario_editar_evento
 from src.GUI.forms.diccionario_forms import formulario_diccionario
+from src.GUI.forms.operacion_forms import formulario_operacion
 
-# Tema y estilo moderno
+# Tema y estilo 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -48,7 +49,7 @@ acciones_diccionario = [
 acciones_variable = [
     ("Añadir Variable", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo")),
     ("Añadir Historia a Variable", lambda: messagebox.showinfo("En desarrollo", "Historia a Variable en desarrollo")),
-    ("Añadir Operación a Variable", lambda: messagebox.showinfo("En desarrollo", "Operación a Variable en desarrollo")),
+    ("Añadir Operación a Variable", lambda: formulario_operacion(app)),
     ("Añadir Variable Longitudinal", lambda: messagebox.showinfo("En desarrollo", "Variable Longitudinal en desarrollo"))
 ]
 acciones_episodio = [
