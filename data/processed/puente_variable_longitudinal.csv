@@ -1,28 +1,28 @@
 id_grupo_variable,id_variable_longitudinal,descripcion,abcisa
-dfaf3648-d790-49b4-bd8b-88045c762ea0,81b093dd-0a15-4550-a23b-18d48d8112f2,VL_Weight - nacimiento a 40 semEG,ERN_EGBallard
-dfaf3648-d790-49b4-bd8b-88045c762ea0,66615e00-ba18-4e53-a3f8-d6e72de05744,VL_Weight - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
-dfaf3648-d790-49b4-bd8b-88045c762ea0,b8f2941d-1c69-4b42-bd4d-d865fba7b5dd,VL_Weight - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
-dfaf3648-d790-49b4-bd8b-88045c762ea0,70c2f1f2-0e33-45b9-98ba-33c623d1de7b,VL_Weight - 3M,SEG_EdadVisita3mECV260
-dfaf3648-d790-49b4-bd8b-88045c762ea0,e2f9caa6-70cd-4969-b3fc-17916cfbdbc9,VL_Weight - 6M,SEG_EdadVisita6mECV303
-dfaf3648-d790-49b4-bd8b-88045c762ea0,545fcac7-a599-407e-8681-e33712f0445c,VL_Weight - 9M,SEG_EdadVisita9mECV346
-dfaf3648-d790-49b4-bd8b-88045c762ea0,27107423-86a8-4c55-b74b-3415ede817bd,VL_Weight - 12M,SEG_EdadVisita12mECV388
-03fcad3f-dcd7-4727-97f6-15de0863ac75,16586629-a4ca-4b9e-95a8-e01cf5c48b16,VL_Height - nacimiento a 40 semEG,ERN_EGBallard
-03fcad3f-dcd7-4727-97f6-15de0863ac75,a40e76d0-253d-4a76-bb8d-ae66c5f4f21b,VL_Height - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
-03fcad3f-dcd7-4727-97f6-15de0863ac75,9bd9977b-09d0-472b-aa36-924d5e6e4da2,VL_Height - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
-03fcad3f-dcd7-4727-97f6-15de0863ac75,e7cedf23-3ba4-4a82-bda8-dcc0770161bb,VL_Height - 3M,SEG_EdadVisita3mECV260
-03fcad3f-dcd7-4727-97f6-15de0863ac75,58ce73a4-0749-48b1-944c-1ad15c695be3,VL_Height - 6M,SEG_EdadVisita6mECV303
-03fcad3f-dcd7-4727-97f6-15de0863ac75,b0525e0d-27bb-49b9-b6c7-767e25c8213c,VL_Height - 9M,SEG_EdadVisita9mECV346
-03fcad3f-dcd7-4727-97f6-15de0863ac75,0097e018-abf4-418c-82c9-2ce38e8bca01,VL_Height - 12M,SEG_EdadVisita12mECV388
-6542c55d-81fb-4ef7-8616-92f2f6672652,4950894c-35a9-4b4c-b3a1-30e425f74ac1,VL_HeadCircunference - nacimiento a 40 semEG,ERN_EGBallard
-6542c55d-81fb-4ef7-8616-92f2f6672652,9d24ddc0-1994-4439-a424-7ef21ba9a7f0,VL_HeadCircunference - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
-6542c55d-81fb-4ef7-8616-92f2f6672652,d79a4e64-448e-4ce0-b137-37115400a238,VL_HeadCircunference - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
-6542c55d-81fb-4ef7-8616-92f2f6672652,7865bcc0-2042-471f-bfdc-1c1104b8c5f8,VL_HeadCircunference - 3M,SEG_EdadVisita3mECV260
-6542c55d-81fb-4ef7-8616-92f2f6672652,497f6333-94b5-46e4-9f13-9195a838c089,VL_HeadCircunference - 6M,SEG_EdadVisita6mECV303
-6542c55d-81fb-4ef7-8616-92f2f6672652,924b6b48-6c55-4d59-b6c9-3ed92e0616c8,VL_HeadCircunference - 9M,SEG_EdadVisita9mECV346
-6542c55d-81fb-4ef7-8616-92f2f6672652,23b647a3-9013-416e-87eb-beb6d71bc5bd,VL_HeadCircunference - 12M,SEG_EdadVisita12mECV388
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,bd48cb05-fd71-4695-a5a0-ed475e3e94dc,VL_Nutrition - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,90edb9db-b2e2-4e33-8ca8-df9a577c69e4,VL_Nutrition - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,634b2207-4895-49d8-8d11-7c938eae1bdf,VL_Nutrition - 3M,SEG_EdadVisita3mECV260
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,9f5b2b49-7bcf-4e3c-b5af-6c7cb3f57a42,VL_Nutrition - 6M,SEG_EdadVisita6mECV303
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,30557577-264c-443b-a64c-c31f66ba8222,VL_Nutrition - 9M,SEG_EdadVisita9mECV346
-87c1d087-0450-4c0a-90c4-a4d372aad2d6,513479a1-c7a8-48cf-95b7-9a3ede6c2c8f,VL_Nutrition - 12M,SEG_EdadVisita12mECV388
+4613cd25-3533-48f8-99cb-057c073748bc,969c9bb0-e6ff-472c-bd5b-dcd9719175c1,VL_Weight - nacimiento a 40 semEG,ERN_EGBallard
+4613cd25-3533-48f8-99cb-057c073748bc,c706b08f-a6c9-4609-9879-4400ef5bfbd3,VL_Weight - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
+4613cd25-3533-48f8-99cb-057c073748bc,2c2e20ea-9876-4cc5-8154-e5bdebf8430f,VL_Weight - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+4613cd25-3533-48f8-99cb-057c073748bc,94532c72-338e-42e4-9a0a-5d383318471e,VL_Weight - 3M,SEG_EdadVisita3mECV260
+4613cd25-3533-48f8-99cb-057c073748bc,9f82d590-3663-41e6-9777-903aa03471e4,VL_Weight - 6M,SEG_EdadVisita6mECV303
+4613cd25-3533-48f8-99cb-057c073748bc,47903618-98c6-433e-8595-bf56be9610de,VL_Weight - 9M,SEG_EdadVisita9mECV346
+4613cd25-3533-48f8-99cb-057c073748bc,a2f6e42e-fcc3-42b5-8788-c8c4038a03fc,VL_Weight - 12M,SEG_EdadVisita12mECV388
+153a6a60-2060-409d-9012-5ee3138bdb57,9a7fe647-c162-4ccb-9b59-d7cdc4647272,VL_Height - nacimiento a 40 semEG,ERN_EGBallard
+153a6a60-2060-409d-9012-5ee3138bdb57,b017e18d-3be1-4007-a5e9-ae3932cc2e15,VL_Height - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
+153a6a60-2060-409d-9012-5ee3138bdb57,e620a475-584d-4a3d-9f5f-a6867b4d06fb,VL_Height - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+153a6a60-2060-409d-9012-5ee3138bdb57,5bb1d1b4-9710-4b1b-9357-da792b598148,VL_Height - 3M,SEG_EdadVisita3mECV260
+153a6a60-2060-409d-9012-5ee3138bdb57,abefb7ed-c093-4d5f-a9a0-36c5fd165cab,VL_Height - 6M,SEG_EdadVisita6mECV303
+153a6a60-2060-409d-9012-5ee3138bdb57,245465cc-f4d0-40f9-b5f5-c8618b8d808b,VL_Height - 9M,SEG_EdadVisita9mECV346
+153a6a60-2060-409d-9012-5ee3138bdb57,175f81b0-ddc8-4377-8c09-7e91caeaf4a6,VL_Height - 12M,SEG_EdadVisita12mECV388
+d85f4b15-45d5-4213-b158-6ef538b3eb14,4d221fe1-b49d-4548-bc3e-59c36377abf9,VL_HeadCircunference - nacimiento a 40 semEG,ERN_EGBallard
+d85f4b15-45d5-4213-b158-6ef538b3eb14,fc7a1605-e914-4725-8ec3-5f8de6414744,VL_HeadCircunference - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
+d85f4b15-45d5-4213-b158-6ef538b3eb14,2022fe8a-b5d6-47ea-8b79-0f52a97e137d,VL_HeadCircunference - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+d85f4b15-45d5-4213-b158-6ef538b3eb14,05a67a9b-9b39-4818-bcd3-2a0d4140acea,VL_HeadCircunference - 3M,SEG_EdadVisita3mECV260
+d85f4b15-45d5-4213-b158-6ef538b3eb14,7b440038-27c6-4c3d-801e-f70cd04fe03c,VL_HeadCircunference - 6M,SEG_EdadVisita6mECV303
+d85f4b15-45d5-4213-b158-6ef538b3eb14,00416eaa-33a9-4568-b2d0-87d01b7fd745,VL_HeadCircunference - 9M,SEG_EdadVisita9mECV346
+d85f4b15-45d5-4213-b158-6ef538b3eb14,256e40a0-32e5-4d46-87c0-4159fafc3253,VL_HeadCircunference - 12M,SEG_EdadVisita12mECV388
+252f8b57-b6fa-42c6-a924-e204050a6860,463c5973-e782-4eec-8cda-edfe00100d8a,VL_Nutrition - nacimiento a 40 semEG.1,PCANG_EGentradaPMC
+252f8b57-b6fa-42c6-a924-e204050a6860,5ec17852-b305-417d-9893-30360ba99675,VL_Nutrition - 40S,((PCANG_FechaVisita40semV215 -PA-FechaParto)/7 )+ ERN_EGBallard
+252f8b57-b6fa-42c6-a924-e204050a6860,c9975119-7c11-42bc-9222-889041e26df7,VL_Nutrition - 3M,SEG_EdadVisita3mECV260
+252f8b57-b6fa-42c6-a924-e204050a6860,416c2405-8b51-4fc2-ad1e-76376227df58,VL_Nutrition - 6M,SEG_EdadVisita6mECV303
+252f8b57-b6fa-42c6-a924-e204050a6860,6a0d7220-6f82-449b-81ad-849f748c1d10,VL_Nutrition - 9M,SEG_EdadVisita9mECV346
+252f8b57-b6fa-42c6-a924-e204050a6860,baa0b4c4-0658-4bd2-b4eb-21f768118b92,VL_Nutrition - 12M,SEG_EdadVisita12mECV388

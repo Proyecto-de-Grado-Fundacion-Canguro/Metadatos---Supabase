@@ -1,14 +1,14 @@
 id,sigla,descripcion
-1485cae9-8f1c-4126-a24b-6201874eaeac,IDEN,IdentificaciOn del sujeto
-61295964-c499-4c63-a0c1-f363d84966c8,AC,Adaptacion canguro (En el hospital?)
-dfb1a582-c51a-4d82-a6c2-871abb72cadf,CP,Control Prenatal
-019923eb-d291-4f93-a118-c5e6f958b83b,CSP,Condicion social
-f6b2ba11-93d0-4a26-8cc8-f6fbfd29f8ab,ERN,Recien Nacidos
-69741b4a-4338-4a06-9446-6f631437f815,HD,Hospitalizacion
-cdd0ed68-5de7-427c-9367-56fc0a7ac247,PA,Parto
-3c5e7727-8e39-43b1-9c2c-4b70e859c753,NM,Neuromotor
-a03a70f4-6e27-4f85-856f-db42a081964f,SEG,"Seguimiento (consultas,screening,..?)"
-7514db53-5cce-489f-bb1d-b4d86cb9a4a7,PCANG,Posición canguro
-a61d5c2d-f256-4440-874a-be16c388692a,NUT,Nutricion
-bdac2e14-5d1c-4d57-bae7-f68c3ef2ec1e,CR,Crecimiento
-52eebd20-4d6d-4137-b77f-9298db5728ad,OX,Oxígeno 
+45bde20f-e674-4075-befa-4e47651b90c0,IDEN,IdentificaciOn del sujeto
+e46e1a8e-6397-41ec-8cf7-fb7e97720bed,AC,Adaptacion canguro (En el hospital?)
+25e4f474-7e29-4db7-ba33-19eea7afc9c3,CP,Control Prenatal
+7384a1c6-849a-411c-8964-bde2abaa2f03,CSP,Condicion social
+fa5ff6bf-e999-4879-9d63-a8a5702801e4,ERN,Recien Nacidos
+64b049db-e7d7-4154-b140-a00c9d0288a9,HD,Hospitalizacion
+89f35693-a81c-4986-bbb7-b653d1b4a4b4,PA,Parto
+e22dd4e5-a35b-421d-974b-aab6bb6cc20b,NM,Neuromotor
+d3366985-dd60-4633-8269-67224aab36b3,SEG,"Seguimiento (consultas,screening,..?)"
+380e2e26-47c9-4c14-8b94-05da1fccb83b,PCANG,Posición canguro
+48db5eac-2afd-4afd-88ae-3dd81f0da1c2,NUT,Nutricion
+60ec2d5a-883c-45c6-9ab9-3055a3478f37,CR,Crecimiento
+895025e0-bf3d-4745-aaf2-5d0fee594996,OX,Oxígeno 
