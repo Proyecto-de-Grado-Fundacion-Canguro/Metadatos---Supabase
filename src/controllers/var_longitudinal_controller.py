@@ -20,12 +20,7 @@ def obtener_ids_variables_por_grupo(id_grupo_variable, supabase):
         print(f"Error al consultar Supabase: {e}")
         return []
     
-def editar_grupo_variable_longitudinal(
-    nombre_grupo: str,
-    nombre_variable_bd: str,
-    fase: str,
-    abcisa: str,
-):
+def editar_grupo_variable_longitudinal(nombre_grupo: str,nombre_variable_bd: str,fase: str,abcisa: str):
 
     try:
         # Buscar ID del grupo
@@ -38,7 +33,7 @@ def editar_grupo_variable_longitudinal(
 
         id_variable = variable_query.data[0]["id"]
 
-        # Insertar en la tabla puente
+        # Insertar en la tabla 
         descripcion = f"{nombre_grupo} - {fase}"
 
         supabase.table("puente_variable_longitudinal").insert({
@@ -54,4 +49,22 @@ def editar_grupo_variable_longitudinal(
     except Exception as e:
         print(f"Error al editar grupo: {e}")
         return {"ok": False, "msg": str(e)}
+    
+def add_grupo(nombre):
+    data = {
+        'nombre': nombre
+    }
+    try:
+        # Inserta el grupo
+        supabase.table("grupo_variable_longitudinal").insert(data).execute()
+        
+        # Consulta el id recién insertado por nombre
+        response = supabase.table("grupo_variable_longitudinal").select("id").eq("nombre", nombre).execute()
+        if response.data:
+            grupo_id = response.data[0]['id']
+            return {"ok": True, "msg": "Grupo VL creado exitosamente.", "id": grupo_id}
+        else:
+            return {"ok": False, "msg": "Grupo creado pero no se pudo obtener el ID.", "id": None}
+    except Exception as e:
+        return {"ok": False, "msg": str(e), "id": None}
 

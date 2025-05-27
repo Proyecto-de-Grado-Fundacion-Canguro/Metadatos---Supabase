@@ -2,12 +2,10 @@ import customtkinter as ctk
 import tkinter.messagebox as mb
 
 from src.supabase_manager import supabase
-from src.controllers.var_longitudinal_controller import buscar_grupo_vl_id_por_nombre,editar_grupo_variable_longitudinal
+from src.controllers.var_longitudinal_controller import buscar_grupo_vl_id_por_nombre,editar_grupo_variable_longitudinal,add_grupo
 from src.controllers.variable_controller import obtener_nombres_variables
 
-
-
-def abrir_formulario_puente_variable():
+def add_variable_grupo():
     ventana = ctk.CTkToplevel()
     ventana.title("Asignar Variable Longitudinal a Grupo")
     ventana.geometry("700x500")
@@ -107,3 +105,94 @@ def abrir_formulario_puente_variable():
     if nombres_grupos:
         combo_grupos.set(nombres_grupos[0])
         mostrar_variables_asociadas(nombres_grupos[0])
+
+def abrir_crear_grupo_y_variables():
+    ventana = ctk.CTkToplevel()
+    ventana.title("Crear Grupo VL y Asignar Variables")
+    ventana.geometry("750x650")
+    ventana.lift()
+    ventana.focus_force()
+    ventana.grab_set()
+
+    entradas_variables = []
+
+    # Campo para nombre del grupo
+    ctk.CTkLabel(ventana, text="Nombre del nuevo grupo").pack(pady=10)
+    entry_nombre_grupo = ctk.CTkEntry(ventana, width=400, placeholder_text="Ej: VL_Weight")
+    entry_nombre_grupo.pack(pady=5)
+
+    # Frame para los campos de variables
+    frame_variables = ctk.CTkFrame(ventana)
+    frame_variables.pack(pady=10)
+
+    nombres_variables = obtener_nombres_variables()
+
+    def agregar_bloque_variable():
+        fila = len(entradas_variables)
+        frame = ctk.CTkFrame(frame_variables)
+        frame.grid(row=fila, column=0, padx=5, pady=3, sticky="w")
+
+        combo = ctk.CTkComboBox(frame, values=nombres_variables, width=180)
+        combo.set("Selecciona variable")
+        combo.grid(row=0, column=0, padx=5)
+
+        fase = ctk.CTkEntry(frame, width=120, placeholder_text="Write thephase")
+        fase.grid(row=0, column=1, padx=5)
+
+        abcisa = ctk.CTkEntry(frame, width=120, placeholder_text="Write the abcise")
+        abcisa.grid(row=0, column=2, padx=5)
+
+        entradas_variables.append((combo, fase, abcisa))
+
+    # Añadir botón "+" al lado del título
+    def boton_mas():
+        agregar_bloque_variable()
+
+    frame_header = ctk.CTkFrame(ventana)
+    frame_header.pack()
+    ctk.CTkLabel(frame_header, text="Variables a añadir:").pack(side="left", padx=10)
+    ctk.CTkButton(frame_header, text="+", width=30, command=boton_mas).pack(side="left")
+
+    # Agregar el primer bloque
+    agregar_bloque_variable()
+
+    # Crear grupo y guardar variables
+    def crear_grupo_y_guardar():
+        nombre_grupo = entry_nombre_grupo.get().strip()
+        if not nombre_grupo:
+            mb.showwarning("Campo vacío", "Debes ingresar un nombre para el grupo.")
+            return
+
+        resultado = add_grupo(nombre_grupo)
+        if not resultado["ok"]:
+            mb.showerror("Error", resultado["msg"])
+            return
+
+        grupo_id = resultado["id"]
+        nombre = nombre_grupo
+        guardadas = 0
+        errores = []
+
+        for combo, fase_entry, abcisa_entry in entradas_variables:
+            variable = combo.get()
+            fase = fase_entry.get().strip()
+            abcisa = abcisa_entry.get().strip()
+
+            if not variable or not fase or not abcisa or variable == "Selecciona variable":
+                errores.append("Hay campos vacíos o sin seleccionar en una de las variables.")
+                continue
+
+            r = editar_grupo_variable_longitudinal(nombre, variable, fase, abcisa)
+            if r["ok"]:
+                guardadas += 1
+            else:
+                errores.append(r["msg"])
+
+        if guardadas:
+            mb.showinfo("Éxito", f"Grupo y {guardadas} variable(s) añadidas correctamente.")
+            ventana.destroy()
+        elif errores:
+            mb.showerror("Error", "\n".join(errores))
+
+    # Botón final
+    ctk.CTkButton(ventana, text="Crear grupo con variables", command=crear_grupo_y_guardar).pack(pady=20)

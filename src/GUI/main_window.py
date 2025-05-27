@@ -11,7 +11,7 @@ from src.GUI.forms.diccionario_forms import formulario_diccionario
 from src.GUI.forms.operacion_forms import formulario_operacion
 from src.GUI.forms.fase_forms import formulario_editar_fase,formulario_crear_fase
 from src.GUI.forms.episodio_forms import formulario_crear_episodio, formulario_editar_episodio
-from src.GUI.forms.vls_form import abrir_formulario_puente_variable
+from src.GUI.forms.vls_form import add_variable_grupo, abrir_crear_grupo_y_variables
 
 # Tema y estilo 
 ctk.set_appearance_mode("dark")
@@ -68,8 +68,8 @@ acciones_evento = [
 ]
 
 acciones_vls=[
-    ("Añadir Variable a Grupo Longitudinal",lambda: abrir_formulario_puente_variable()),
-    ("Añadir Grupo Longitudinal", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo"))
+    ("Añadir Variable a Grupo Longitudinal",lambda: add_variable_grupo()),
+    ("Añadir Grupo Longitudinal", lambda: abrir_crear_grupo_y_variables())
 ]
 
 agregar_botones("Diccionario", acciones_diccionario)
