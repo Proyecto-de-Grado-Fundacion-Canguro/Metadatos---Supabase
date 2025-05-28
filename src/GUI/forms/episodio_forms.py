@@ -87,11 +87,30 @@ def formulario_editar_episodio(root):
     var_fin = ctk.StringVar()
 
     ctk.CTkLabel(ventana, text="Evento Inicial").pack()
-    dropdown_inicio = ctk.CTkOptionMenu(ventana, values=eventos, variable=var_inicio, width=500)
+    dropdown_inicio = ctk.CTkOptionMenu(
+        ventana,
+        values=eventos,
+        variable=var_inicio,
+        width=500,
+        fg_color="#2a2a2a",
+        button_color="#3a3a3a",
+        text_color="white",
+        dropdown_fg_color="#2a2a2a",
+        dropdown_text_color="white"
+    )
+    dropdown_inicio.pack()
     dropdown_inicio.pack(pady=5)
 
     ctk.CTkLabel(ventana, text="Evento Final").pack()
-    dropdown_fin = ctk.CTkOptionMenu(ventana, values=eventos, variable=var_fin, width=500)
+    dropdown_fin = ctk.CTkOptionMenu(ventana,
+        values=eventos,
+        variable=var_inicio,
+        width=500,
+        fg_color="#2a2a2a",
+        button_color="#3a3a3a",
+        text_color="white",
+        dropdown_fg_color="#2a2a2a",
+        dropdown_text_color="white")
     dropdown_fin.pack(pady=5)
 
     def cargar():

@@ -106,7 +106,11 @@ def formulario_editar_evento():
         width=500,
         height=40,
         font=("Segoe UI", 16),
-        dropdown_font=("Segoe UI", 16)
+        dropdown_font=("Segoe UI", 16),
+        fg_color="#2e2e2e", 
+        button_color="#444", 
+        button_hover_color="#555", 
+        text_color="white"
     )
 
     def cargar_datos():

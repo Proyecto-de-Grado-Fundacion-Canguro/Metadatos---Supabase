@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import tkinter.messagebox as mb
 from src.supabase_manager import supabase
+import tkinter as tk
 from src.controllers.variable_controller import obtener_nombres_variables_basicas, obtener_variables_tipo_fecha, convertir_variable_a_cambiante
 from src.controllers.variable_controller import buscar_variable_id_por_nombre_analisis, agregar_historia_variable_cambiante, obtener_nombres_variables_cambiantes
 
@@ -52,7 +53,6 @@ def abrir_formulario_convertir_basica():
             nombre_variable=nombre_var,
             variable_inicio=var_inicio,
             variable_fin=var_fin,
-            variable_activa=id_var,  
             activa=True
         )
 
@@ -74,7 +74,8 @@ def abrir_formulario_agregar_historia():
     ventana.grab_set()
 
     try:
-        variables_cambiantes = obtener_nombres_variables_cambiantes()  
+        variables_cambiantes = obtener_nombres_variables_cambiantes()
+        variables_cambiantes = [str(v) for v in variables_cambiantes if v]  # asegurar que sean strings
         variables_fecha = obtener_variables_tipo_fecha()
         nombres_fecha = [v["nombre_analisis"] for v in variables_fecha]
     except Exception as e:
@@ -83,13 +84,30 @@ def abrir_formulario_agregar_historia():
         return
 
     ctk.CTkLabel(ventana, text="Selecciona variable cambiante").pack(pady=5)
-    combo_var = ctk.CTkComboBox(ventana, values=variables_cambiantes, width=400)
+
+    variable_cambiante_var = tk.StringVar(value="")  # inicial vacío
+
+    if variables_cambiantes:
+        variable_cambiante_var.set("")  # dejar vacío si hay opciones
+        combo_var = ctk.CTkComboBox(ventana, values=variables_cambiantes, width=400, variable=variable_cambiante_var)
+    else:
+        mensaje_sin_variables = "No hay variables cambiantes"
+        variable_cambiante_var.set(mensaje_sin_variables)
+        combo_var = ctk.CTkComboBox(
+            ventana,
+            values=[mensaje_sin_variables],
+            width=400,
+            variable=variable_cambiante_var,
+            state="disabled"
+        )
+
+
     combo_var.pack(pady=5)
 
     label_inicio = ctk.CTkLabel(ventana, text="Variable inicio actual: (selecciona variable arriba)", text_color="gray")
     label_inicio.pack(pady=5)
 
-    variable_inicio_actual = None  
+    variable_inicio_actual = None
 
     def actualizar_inicio_automaticamente(nombre_var):
         nonlocal variable_inicio_actual
@@ -116,16 +134,17 @@ def abrir_formulario_agregar_historia():
                 variable_inicio_actual = None
                 label_inicio.configure(text="No hay historia activa para esta variable", text_color="red")
         except Exception as e:
+            variable_inicio_actual = None
             label_inicio.configure(text=f"Error al consultar inicio: {e}", text_color="red")
 
-    combo_var.configure(command=actualizar_inicio_automaticamente)
+    variable_cambiante_var.trace_add("write", lambda *_: actualizar_inicio_automaticamente(variable_cambiante_var.get()))
 
     ctk.CTkLabel(ventana, text="Selecciona variable fecha fin").pack(pady=5)
     combo_fin = ctk.CTkComboBox(ventana, values=nombres_fecha, width=300)
     combo_fin.pack(pady=5)
 
     def guardar_historia():
-        nombre_variable = combo_var.get()
+        nombre_variable = variable_cambiante_var.get()
         variable_fin = combo_fin.get()
 
         if not nombre_variable or not variable_inicio_actual or not variable_fin:
