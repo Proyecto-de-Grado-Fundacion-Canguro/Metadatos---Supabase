@@ -38,7 +38,6 @@ def actualizar_evento(nombre_original, fecha_fin):
         return {"ok": False, "msg": str(e)}
 
 def obtener_nombres_eventos():
-    """Obtiene todos los nombres de eventos existentes."""
     try:
         response = supabase.table("evento").select("nombre").execute()
         if response.data:
@@ -58,3 +57,16 @@ def buscar_evento_id_por_nombre(nombre):
     except Exception as e:
         print(f"Error al buscar evento: {e}")
         return None
+
+def obtener_eventos_existentes():
+    try:
+        response = supabase.table("evento")\
+            .select("id, nombre")\
+            .eq("activo", True)\
+            .execute()
+
+        return response.data if response.data else []
+
+    except Exception as e:
+        print(f"Error al obtener eventos existentes: {e}")
+        return []

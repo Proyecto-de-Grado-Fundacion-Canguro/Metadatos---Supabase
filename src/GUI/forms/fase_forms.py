@@ -6,13 +6,14 @@ from datetime import date
 import customtkinter as ctk
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from src.controllers.evento_controller import obtener_eventos_existentes
 
 from src.controllers.fase_controller import *
 
 def formulario_crear_fase(root):
     ventana = ctk.CTkToplevel(root)
     ventana.title("Añadir Fase")
-    ventana.geometry("500x500")
+    ventana.geometry("500x600")
     ventana.grab_set()
 
     nombre_analisis = ctk.CTkEntry(ventana, placeholder_text="Nombre de análisis", width=400)
@@ -27,6 +28,19 @@ def formulario_crear_fase(root):
     posicion = ctk.CTkEntry(ventana, placeholder_text="Número de fase (posición)", width=400)
     posicion.pack(pady=10)
 
+    # Obtener eventos de la base de datos
+    eventos = obtener_eventos_existentes()
+    eventos_map = {e["nombre"]: e["id"] for e in eventos}
+    nombres_eventos = list(eventos_map.keys())
+
+    ctk.CTkLabel(ventana, text="Evento inicial").pack(pady=5)
+    combo_inicio = ctk.CTkComboBox(ventana, values=nombres_eventos, width=400)
+    combo_inicio.pack(pady=5)
+
+    ctk.CTkLabel(ventana, text="Evento final").pack(pady=5)
+    combo_fin = ctk.CTkComboBox(ventana, values=nombres_eventos, width=400)
+    combo_fin.pack(pady=5)
+
     def guardar():
         try:
             pos = int(posicion.get())
@@ -34,11 +48,20 @@ def formulario_crear_fase(root):
             messagebox.showerror("Error", "El número de fase debe ser un número entero.")
             return
 
+        id_evento_inicio = eventos_map.get(combo_inicio.get())
+        id_evento_fin = eventos_map.get(combo_fin.get())
+
+        if not id_evento_inicio or not id_evento_fin:
+            messagebox.showerror("Error", "Debe seleccionar eventos válidos.")
+            return
+
         res = insertar_fase(
             nombre_analisis.get(),
             nombre_bd.get(),
             descripcion.get(),
-            pos
+            pos,
+            id_evento_inicio,
+            id_evento_fin
         )
 
         if res["ok"]:
@@ -48,7 +71,6 @@ def formulario_crear_fase(root):
             messagebox.showerror("Error", res["msg"])
 
     ctk.CTkButton(ventana, text="Guardar Fase", command=guardar).pack(pady=20)
-
 def formulario_editar_fase(root):
     ventana = ctk.CTkToplevel(root)
     ventana.title("Editar Fase")

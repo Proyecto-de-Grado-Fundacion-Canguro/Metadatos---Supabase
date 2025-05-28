@@ -77,6 +77,37 @@ def poblar_fase():
     fase = pd.DataFrame(filas,columns=['id','nombre_analisis','nombre_bd','descripcion','ultimo','fecha_inicio','fecha_fin','activo','num_fase'])
     return fase
 
+def poblar_fase_evento(evento_df, fase_df):
+    filas = []
+    # Creamos un diccionario para acceder rápido al ID de un evento por su nombre
+    evento_dict = dict(zip(evento_df['nombre'], evento_df['id']))
+
+    for i, row in df_fases.iterrows():
+        nombre_bd_fase = row['ID-Phase']
+
+        # Buscamos el id de la fase en fase_df usando el nombre_bd
+        id_fase = fase_df.loc[fase_df['nombre_bd'] == nombre_bd_fase, 'id'].values
+        if len(id_fase) == 0:
+            continue  # Saltamos si no se encuentra la fase
+        id_fase = id_fase[0]
+
+        nombre_evento_inicio = row['Evento inicial (id-var)']
+        nombre_evento_fin = row['Evento-final (id-var)']
+
+        id_evento_inicio = evento_dict.get(nombre_evento_inicio)
+        id_evento_fin = evento_dict.get(nombre_evento_fin)
+
+        if id_evento_inicio and id_evento_fin:
+            filas.append({
+                'id_fase': id_fase,
+                'id_evento_inicio': id_evento_inicio,
+                'id_evento_fin': id_evento_fin
+            })
+
+    fase_evento_df = pd.DataFrame(filas, columns=['id_fase', 'id_evento_inicio', 'id_evento_fin'])
+    return fase_evento_df
+
+
 #### Dimensión Episodio ---------------------------------------------------------------------------------
 def poblar_episodio(evento_df):
     filas = []
@@ -355,7 +386,7 @@ def retornar_temas_interes_por_variable (row,temasInteres):
 
 #### Tabla de hechos Registrar Variable -------------------------------------------------------------------------------
 def retornar_episodios_por_variable(row, df_episodios):
-    cols_epi = ['ID-Episode-1', 'ID-Episode-2']
+    cols_epi = ['ID-Episode-1', 'ID-Episode-2','ID-Episode-3']
     ids = []
     for col in cols_epi:
         if pd.notna(row[col]) and row[col] != ' ':

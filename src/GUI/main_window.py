@@ -13,6 +13,7 @@ from src.GUI.forms.fase_forms import formulario_editar_fase,formulario_crear_fas
 from src.GUI.forms.episodio_forms import formulario_crear_episodio, formulario_editar_episodio
 from src.GUI.forms.vls_form import add_variable_grupo, abrir_crear_grupo_y_variables
 from src.GUI.forms.cambiantes_forms import abrir_formulario_convertir_basica,abrir_formulario_agregar_historia
+from src.GUI.forms.hecho_form import formulario_cargar_hecho
 
 # Tema y estilo 
 ctk.set_appearance_mode("dark")
@@ -51,7 +52,7 @@ acciones_diccionario = [
     ("Cargar diccionario", lambda: formulario_diccionario(app))
 ]
 acciones_variable = [
-    ("Añadir Variable", lambda: messagebox.showinfo("En desarrollo", "Añadir Variable en desarrollo")),
+    ("Añadir Variable", lambda:formulario_cargar_hecho(app)),
     ("Convertir variable básica a cambiante", lambda: abrir_formulario_convertir_basica()),
     ("Añadir historia a variable cambiante", lambda: abrir_formulario_agregar_historia()),
     ("Añadir Operación a Variable", lambda: formulario_operacion(app))
@@ -65,8 +66,8 @@ acciones_fase = [
     ("Editar Fase", lambda: formulario_editar_fase(app))
 ]
 acciones_evento = [
-    ("Añadir Evento", lambda: formulario_crear_evento),
-    ("Editar Evento", lambda: formulario_editar_evento)
+    ("Añadir Evento", lambda: formulario_crear_evento()),
+    ("Editar Evento", lambda: formulario_editar_evento())
 ]
 
 acciones_vls=[

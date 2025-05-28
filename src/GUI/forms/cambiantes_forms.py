@@ -43,7 +43,6 @@ def abrir_formulario_convertir_basica():
             mb.showwarning("Campos incompletos", "Debes seleccionar todos los campos.")
             return
 
-        # Obtener ID para pasarlo como valor de 'variable_activa'
         id_var = buscar_variable_id_por_nombre_analisis(nombre_var)
         if not id_var:
             mb.showerror("Error", f"No se encontró el ID de la variable '{nombre_var}'.")
@@ -53,7 +52,7 @@ def abrir_formulario_convertir_basica():
             nombre_variable=nombre_var,
             variable_inicio=var_inicio,
             variable_fin=var_fin,
-            variable_activa=id_var,  # ← aquí lo corregido
+            variable_activa=id_var,  
             activa=True
         )
 
@@ -74,7 +73,6 @@ def abrir_formulario_agregar_historia():
     ventana.focus_force()
     ventana.grab_set()
 
-    # --- Cargar datos iniciales ---
     try:
         variables_cambiantes = obtener_nombres_variables_cambiantes()  
         variables_fecha = obtener_variables_tipo_fecha()
@@ -84,16 +82,14 @@ def abrir_formulario_agregar_historia():
         ventana.destroy()
         return
 
-    # --- Combo: Variable cambiante ---
     ctk.CTkLabel(ventana, text="Selecciona variable cambiante").pack(pady=5)
     combo_var = ctk.CTkComboBox(ventana, values=variables_cambiantes, width=400)
     combo_var.pack(pady=5)
 
-    # --- Mostrar variable_inicio automáticamente ---
     label_inicio = ctk.CTkLabel(ventana, text="Variable inicio actual: (selecciona variable arriba)", text_color="gray")
     label_inicio.pack(pady=5)
 
-    variable_inicio_actual = None  # almacenará el nombre_analisis
+    variable_inicio_actual = None  
 
     def actualizar_inicio_automaticamente(nombre_var):
         nonlocal variable_inicio_actual
@@ -109,7 +105,6 @@ def abrir_formulario_agregar_historia():
             if res.data:
                 id_fecha_inicio = res.data[0]["variable_fecha_fin"]
 
-                # Buscar nombre_analisis correspondiente
                 r = supabase.table("variable").select("nombre_analisis").eq("id", id_fecha_inicio).execute()
                 if r.data:
                     variable_inicio_actual = r.data[0]["nombre_analisis"]
@@ -125,12 +120,10 @@ def abrir_formulario_agregar_historia():
 
     combo_var.configure(command=actualizar_inicio_automaticamente)
 
-    # --- Combo: Variable fecha fin ---
     ctk.CTkLabel(ventana, text="Selecciona variable fecha fin").pack(pady=5)
     combo_fin = ctk.CTkComboBox(ventana, values=nombres_fecha, width=300)
     combo_fin.pack(pady=5)
 
-    # --- Botón para guardar historia ---
     def guardar_historia():
         nombre_variable = combo_var.get()
         variable_fin = combo_fin.get()

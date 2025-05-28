@@ -1,6 +1,77 @@
 from src.supabase_manager import supabase
 from datetime import date
 
+def crear_variable(data):
+    try:
+        result = supabase.table("variable").insert(data).execute()
+        if result.data and "id" in result.data[0]:
+            return {
+                "ok": True,
+                "msg": "Variable creada exitosamente.",
+                "id": result.data[0]["id"]
+            }
+        else:
+            return {
+                "ok": False,
+                "msg": "Variable creada pero no se pudo obtener el ID."
+            }
+    except Exception as e:
+        return {"ok": False, "msg": str(e)}
+
+def crear_variable_cambiante(
+    nombre_bd: str,
+    nombre_analisis: str,
+    descripcion_corta: str,
+    descripcion_larga: str,
+    unidades: str,
+    tipo_dato: str,
+    nivel_medicion: str,
+    derivada: bool,
+    impacto: bool,
+    id_prefijo: str,
+    variable_fecha_inicio: str,
+    variable_fecha_fin: str,
+    activa: bool = True
+):
+
+    try:
+        data_variable = {
+            "nombre_bd": nombre_bd,
+            "nombre_analisis": nombre_analisis,
+            "descripcion_corta": descripcion_corta,
+            "descripcion_larga": descripcion_larga,
+            "unidades": unidades,
+            "tipo_dato": tipo_dato,
+            "nivel_medicion": nivel_medicion,
+            "basica": False,             
+            "longitudinal": False,       
+            "derivada": derivada,
+            "impacto": impacto,
+            "id_prefijo": id_prefijo
+        }
+
+        insert_result = supabase.table("variable").insert(data_variable).execute()
+        if not insert_result.data:
+            return {"ok": False, "msg": "No se pudo insertar la variable."}
+
+        id_variable = insert_result.data[0]["id"]
+
+        data_cambiante = {
+            "id": id_variable,
+            "variable_fecha_inicio": variable_fecha_inicio,
+            "variable_fecha_fin": variable_fecha_fin,
+            "variable_activa": id_variable,
+            "activa": activa
+        }
+
+        supabase.table("variable_cambiante").insert(data_cambiante).execute()
+
+        return {"ok": True, "msg": "Variable cambiante creada exitosamente."}
+
+    except Exception as e:
+        return {"ok": False, "msg": str(e)}
+
+
 def obtener_nombres_variables():
     response = supabase.table("variable").select("nombre_analisis").execute()
     if response.data:
@@ -54,7 +125,7 @@ def add_operacion_a_variable(ids_variable, descripcion):
         return {"ok": False, "msg": f"Error al crear operación: {e}"}
     
 #-----------------Funcionalidades relacionada a historia---------------------------------------
-def convertir_variable_a_cambiante(nombre_variable, variable_inicio, variable_fin,variable_activa,activa=True):
+def convertir_variable_a_cambiante(nombre_variable, variable_inicio, variable_fin,activa=True):
     try:
         id_var = buscar_variable_id_por_nombre_analisis(nombre_variable)
         id_inicio = buscar_variable_id_por_nombre_analisis(variable_inicio)

@@ -1,17 +1,17 @@
 id,nombre,id_variable_fecha,descripcion,fecha_inicio,fecha_fin,activo
-c91ac3ac-8f82-427f-ba47-b6c7c5e93271,registro en el sistema,,,2025-01-01,9999-12-31 00:00:00,True
-b3dc6a21-b34b-455f-a82b-2b4b494ede64,registro del entorno,,,2025-01-01,9999-12-31 00:00:00,True
-58918f4e-f7ea-485a-aba6-f27fe9d24910,CP_MesInicCP,b182e380-1f69-414c-a493-7a79c3a57dbb,Mes de inicio del control prenatal,2025-01-01,9999-12-31 00:00:00,True
-365d8a34-c030-4db1-afd1-444f2335bada,PA_FechaParto,6d4366d1-9625-4e4a-b6d2-6ff1996690a4,Fecha del parto,2025-01-01,9999-12-31 00:00:00,True
-dceebfb0-c3b3-42ba-871b-1f166ebda727,PCANG_FechaVisita40semV215,807c3026-0944-490b-9951-2012bdcc2671,Fecha de visita 40 sem EG,2025-01-01,9999-12-31 00:00:00,True
-c6f6d105-3766-4029-b3e7-1da46543d24a,SEG_EdadVisita3mECV260,c7a6fcc6-a8a7-4888-ae22-583ca18f234e,Edad a la visita de los 3 meses,2025-01-01,9999-12-31 00:00:00,True
-f005980b-2396-491b-9f1e-bc5c90e33a8d,SEG_EdadVisita6mECV303,a5fafd9b-c0c7-4b21-b932-b55d2d5a7545,Edad a la visita de los 6 meses,2025-01-01,9999-12-31 00:00:00,True
-db1bc904-31d1-49b6-b728-e435b1c028d3,SEG_EdadVisita9mECV346,de9a5a45-ae67-4a79-8124-fef4dea56e84,Edad a la visita de los 9 meses,2025-01-01,9999-12-31 00:00:00,True
-a4845f85-2639-408a-8ba0-a62d4e93f131,SEG_EdadVisita12mECV388,ebce39bc-a007-4b37-b2c2-704cfd23046e,12mEC Edad a la visita,2025-01-01,9999-12-31 00:00:00,True
-7744857d-fa82-49c3-abd3-ee874165d30b,PCANG_EGentradaPMC,e96d9f93-b917-48c7-8982-5298372c0797,EDAD GESTACIONAL ENTRADA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True
-1c0a5401-60eb-4c5c-af87-60045e63ebd7,HD_FechaEntradaURN,dd93319c-ee69-4c8f-8780-83cda467f13c,Fecha de Entrada en la URN,2025-01-01,9999-12-31 00:00:00,True
-452b3465-0ec7-44c9-bf42-b036889eb232,SEG_Rehosp40A12Meses,fbf8c119-1f97-423a-b235-0ffbb8ac8789,se rehospitalzo al menos una vez de 40 sem a 12 meses,2025-01-01,9999-12-31 00:00:00,True
-0edac993-ecca-4248-a1ee-0c60715c1d48,SEG_OxigenoAmbu40semV236F,75b9b331-ad3b-4775-8238-8303db3a3901,Tiene Oxígeno ambulatorio a 40sEG?,2025-01-01,9999-12-31 00:00:00,True
-ba599c56-8b02-42ce-b495-83526d06f9a1,PCANG_EGaSalPMC,c9a612f8-1f85-43de-b76a-ad25f384bc66,EDAD GESTACIONAL SALIDA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True
-697ed47b-34e0-4961-ab06-38ae05c75650,HD_FechaSalida,,,2025-01-01,9999-12-31 00:00:00,True
-f20358e6-a827-4af4-9309-622cd942be25,SEG_DiagOXigDepend12mECV402E,b8c51ec8-9903-495a-9644-8cbba72e043c,12mEC Diagnóstico de la oxigenodependencia,2025-01-01,9999-12-31 00:00:00,True
+e58397fe-7df3-4bca-922f-c5ea9542fd7e,registro en el sistema,,,2025-01-01,9999-12-31 00:00:00,True
+be5aad91-b94d-493e-b140-32335f90743b,registro del entorno,,,2025-01-01,9999-12-31 00:00:00,True
+8de303fc-1c6d-458d-a640-0075f1241999,CP_MesInicCP,4c49cf11-4374-467b-8097-83e199b54029,Mes de inicio del control prenatal,2025-01-01,9999-12-31 00:00:00,True
+4c12686c-accc-453c-8d82-f60a60474ee0,PA_FechaParto,86d2ff73-032e-4404-92ff-4391a9e6cd77,Fecha del parto,2025-01-01,9999-12-31 00:00:00,True
+132a24f1-e980-45ff-ba7a-a86b9f840611,PCANG_FechaVisita40semV215,01d13afd-f87d-4c13-b527-0d84f76cf360,Fecha de visita 40 sem EG,2025-01-01,9999-12-31 00:00:00,True
+52f6db98-edd9-42e4-a089-af4c40ab7650,SEG_EdadVisita3mECV260,a45b2681-3018-4b90-abb2-64f355992a89,Edad a la visita de los 3 meses,2025-01-01,9999-12-31 00:00:00,True
+f03b81e2-c668-45ca-9d9a-2f1f99af94a5,SEG_EdadVisita6mECV303,5df354ec-6c67-4f92-85cc-cb0a97d1f18e,Edad a la visita de los 6 meses,2025-01-01,9999-12-31 00:00:00,True
+46548949-29fe-4107-9c71-db8471413e5c,SEG_EdadVisita9mECV346,bc3d3ddc-b417-47fe-aa26-82ec23111f9f,Edad a la visita de los 9 meses,2025-01-01,9999-12-31 00:00:00,True
+322a656d-a8c2-41da-81ae-43a51dd72576,SEG_EdadVisita12mECV388,ef15b16f-9cf8-44ac-8196-b07aedfd2316,12mEC Edad a la visita,2025-01-01,9999-12-31 00:00:00,True
+e16f8415-53b8-430a-8321-bad0fa710bde,PCANG_EGentradaPMC,f376c57d-6272-438c-a33a-27c6b1351319,EDAD GESTACIONAL ENTRADA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True
+7b7daac3-825b-4d47-8a0b-7649dcc4fb60,HD_FechaEntradaURN,a9b33f3f-8c57-46cf-8938-45fa9282048c,Fecha de Entrada en la URN,2025-01-01,9999-12-31 00:00:00,True
+48794971-a09a-48cb-9a78-4c3969fa0b71,SEG_Rehosp40A12Meses,ccf31516-1003-42ed-8927-da0405db0c4f,se rehospitalzo al menos una vez de 40 sem a 12 meses,2025-01-01,9999-12-31 00:00:00,True
+7d40f5a8-d901-4c87-8403-0432f5448764,SEG_OxigenoAmbu40semV236F,1488fae3-6477-4d2c-b341-19407fac0ff5,Tiene Oxígeno ambulatorio a 40sEG?,2025-01-01,9999-12-31 00:00:00,True
+723ebde0-b3a1-44b8-bebb-e05591f210b1,PCANG_EGaSalPMC,48e820ae-bec1-469c-bb41-174b1e68a46a,EDAD GESTACIONAL SALIDA POSICION CANGURO,2025-01-01,9999-12-31 00:00:00,True
+9a40097a-6c42-47e5-9887-a23be261280e,HD_FechaSalida,,,2025-01-01,9999-12-31 00:00:00,True
+0b5512c3-b086-4c4d-9cd1-99fa37d09a99,SEG_DiagOXigDepend12mECV402E,bab75f53-63bf-4cd7-84b2-29902b4d0462,12mEC Diagnóstico de la oxigenodependencia,2025-01-01,9999-12-31 00:00:00,True

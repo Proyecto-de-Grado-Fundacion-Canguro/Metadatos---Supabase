@@ -47,6 +47,9 @@ def charge_all_csv():
     exportar_csv(df_evento, "evento")
     manager.cargar_data(df_evento, "evento", ["id"])
 
+    df_auxiliar= poblar_fase_evento(df_evento,df_fase)
+    manager.cargar_data(df_auxiliar, "fase_evento", ["id_fase"])
+
     df_episodio = poblar_episodio(df_evento)
     exportar_csv(df_episodio, "episodio")
     manager.cargar_data(df_episodio, "episodio", ["id"])

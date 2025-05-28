@@ -52,3 +52,32 @@ def actualizar_episodio(nombre_analisis_original, nuevo_nombre_analisis, nuevo_n
 
     except Exception as e:
         return {"ok": False, "msg": f"Error al actualizar episodio: {e}"}
+
+def obtener_episodios():
+    try:
+        response = supabase.table("episodio")\
+            .select("id, nombre_analisis, nombre_bd, descripcion")\
+            .eq("activo", True)\
+            .execute()
+
+        return response.data
+    except Exception as e:
+        print(f"Error al obtener episodios: {e}")
+        return []
+
+def crear_grupo_y_puentes_para_episodios(lista_ids_episodios):
+    if not lista_ids_episodios:
+        return {"ok": False, "msg": "La lista de episodios está vacía."}
+
+    try:
+
+        res_grupo = supabase.table("grupo_episodio").insert({}).execute()
+        id_grupo = res_grupo.data[0]["id"]
+
+        puentes = [{"id_grupo_episodio": id_grupo, "id_episodio": eid} for eid in lista_ids_episodios]
+        supabase.table("puente_episodio").insert(puentes).execute()
+
+        return id_grupo
+
+    except Exception as e:
+        return {"ok": False, "msg": f"Error al crear grupo o puentes: {e}"}
